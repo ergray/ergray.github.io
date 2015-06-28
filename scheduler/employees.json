@@ -1,9 +1,11 @@
-{
-	 
-		"id" : 1,
-		"firstName" : "Chris",
-		"lastName" : "Larson",
-		"daysAvail" : [ "MO", "TC", "FO"],
-		"Hours" : 13.5
-		
-	}
+({
+    "id": 1,
+    "firstName": "Chris",
+    "lastName": "Larson",
+    "daysAvail": [
+        "MO",
+        "TC",
+        "FO"
+    ],
+    "Hours": 13.5
+})
