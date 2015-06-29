@@ -8,8 +8,7 @@
         "FO"
     ],
     "Hours": 13.5
-};
-{
+};{
     "_id": "WW67",
     "firstName": "Wally",
     "lastName": "West",
@@ -19,8 +18,7 @@
         "FM"
     ],
     "Hours": 13.5
-};
-{
+};{
     "_id": "JG43",
     "firstName": "Jay",
     "lastName": "Garrick",
@@ -30,10 +28,8 @@
         "tO",
         "tC",
         "SO",
-        "SC",
+        "SC"
+        
     ],
     "Hours": 13.5
 };
-
-
-
