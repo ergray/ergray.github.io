@@ -1,35 +1,38 @@
-{
-    "_id": "BA33",
-    "firstName": "Barry",
-    "lastName": "Allen",
-    "daysAvail": [
-        "MO",
-        "TC",
-        "FO"
-    ],
-    "Hours": 13.5
-};{
-    "_id": "WW67",
-    "firstName": "Wally",
-    "lastName": "West",
-    "daysAvail": [
-        "MC",
-        "TO",
-        "FM"
-    ],
-    "Hours": 13.5
-};{
-    "_id": "JG43",
-    "firstName": "Jay",
-    "lastName": "Garrick",
-    "daysAvail": [
-        "WO",
-        "WC",
-        "tO",
-        "tC",
-        "SO",
-        "SC"
-        
-    ],
-    "Hours": 13.5
-};
+[
+    {
+        "_id": "BA33",
+        "firstName": "Barry",
+        "lastName": "Allen",
+        "daysAvail": [
+            "MO",
+            "TC",
+            "FO"
+        ],
+        "Hours": 13.5
+    },
+    {
+        "_id": "WW67",
+        "firstName": "Wally",
+        "lastName": "West",
+        "daysAvail": [
+            "MC",
+            "TO",
+            "FM"
+        ],
+        "Hours": 13.5
+    },
+    {
+        "_id": "JG43",
+        "firstName": "Jay",
+        "lastName": "Garrick",
+        "daysAvail": [
+            "WO",
+            "WC",
+            "tO",
+            "tC",
+            "SO",
+            "SC"
+        ],
+        "Hours": 13.5
+    }
+]
