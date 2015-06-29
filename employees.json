@@ -1,4 +1,4 @@
-({
+{
     "id": 1,
     "firstName": "Chris",
     "lastName": "Larson",
@@ -8,4 +8,4 @@
         "FO"
     ],
     "Hours": 13.5
-})
+}
