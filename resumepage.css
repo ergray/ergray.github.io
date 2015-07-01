@@ -1,0 +1,78 @@
+body {
+	background-color: #C0C0C0;
+}
+
+header {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
+
+.divider {
+	border-style: solid;
+	border-color: black;
+	width: 60%;
+	margin-left: 15em;
+}
+
+#portal {
+	width: 13cm;
+	height: 7.5cm;
+	clear: all;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+span {
+	height: 60%;
+	line-height: 60%;
+}
+
+.projects {
+	text-align: center;
+	line-height: 3.5cm;
+	vertical-align: middle;
+	width: 3.5cm;
+	height: 3.5cm;
+}
+
+.menu {
+	opacity: 0;
+}
+
+#curious {
+	background-image: url("./images/map.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: 23.05%;
+	float: left;
+	border-radius: 5cm 0cm 0 0cm;
+}
+
+#baseball {
+	background-image: url("./images/baseball.png");
+	background-size: contain;
+	margin-right: 23.05%;
+	float: right;
+	border-radius: 0 5cm 0 0
+}
+
+#schedule {
+	background-image: url("./images/schedule.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: 23.05%;
+	float: left;
+	border-radius: 0 0 0 5cm
+}
+
+#extra {
+	background-image: url("./images/me.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-right: 23.05%;
+	float: right;
+	border-radius: 0 0 5cm 0
+}
