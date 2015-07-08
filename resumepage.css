@@ -1,5 +1,6 @@
 body {
 	background-color: #C0C0C0;
+	font-size: 20px;
 }
 
 header {
@@ -14,12 +15,16 @@ footer {
 	border-style: solid;
 	border-color: black;
 	width: 60%;
-	margin-left: 15em;
+	margin-left: 20%;
+}
+
+#about {
+	margin-left: 30%;
+	margin-right: 30%;
 }
 
 #portal {
-	width: 13cm;
-	height: 7.5cm;
+	height: 7cm;
 	clear: all;
 	margin-left: 30%;
 	margin-right: 30%;
@@ -31,11 +36,14 @@ span {
 }
 
 .projects {
+	display: inline-block;
 	text-align: center;
 	line-height: 3.5cm;
 	vertical-align: middle;
-	width: 3.5cm;
-	height: 3.5cm;
+	width: 3cm;
+	height:3cm;
+/*	width: 3.5cm;
+	height: 3.5cm;*/
 }
 
 .menu {
@@ -43,36 +51,168 @@ span {
 }
 
 #curious {
+	/*background-color: red;*/
 	background-image: url("./images/map.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin-left: 23.05%;
-	float: left;
+	margin-left: 25%;
+	/*float: left;*/
 	border-radius: 5cm 0cm 0 0cm;
 }
 
 #baseball {
+	/*background-color: blue;*/
 	background-image: url("./images/baseball.png");
 	background-size: contain;
-	margin-right: 23.05%;
-	float: right;
+	/*margin-left: 20%; */
+	/*float: right;*/
 	border-radius: 0 5cm 0 0
 }
 
 #schedule {
+	/*background-color: green;*/
 	background-image: url("./images/schedule.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin-left: 23.05%;
-	float: left;
+	margin-left: 25%;
+	/*float: left;*/
 	border-radius: 0 0 0 5cm
 }
 
 #extra {
+	/*background-color: yellow;*/
 	background-image: url("./images/me.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	margin-right: 23.05%;
-	float: right;
+	/*margin-left: 20%; */
+	/*float: right;*/
 	border-radius: 0 0 5cm 0
+}
+
+@media only screen and (max-width:	936px) {
+
+#about {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+}
+
+@media only screen and (max-width:	771px) {
+
+#about {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#portal {
+	height: 5cm;
+}
+
+.projects {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	width: 2cm;
+	height: 2cm;
+
+}
+
+}
+
+@media only screen and (max-width:	519px) {
+
+.projects {
+	width: 1.75cm;
+	height: 1.75cm;
+}
+
+#about {
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+}
+
+@media only screen and (max-width:	519px) {
+
+.projects {
+	width: 1.5cm;
+	height: 1.5cm;
+}
+
+}
+
+@media only screen and (max-width:	414px) and (orientation: portrait){
+	body {
+		width: 95%;
+		font-size: 21px;
+	}
+
+.divider {
+	display: none;
+}
+
+span {
+	height: 100%;
+	line-height: 100%
+}
+
+#portal {
+	width: 100%;
+	height: 4.5cm;
+	clear: all;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.projects {
+	background-color: white;
+	height: 1cm;
+	width: 100%;
+	border: 3px solid;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 175%;
+	float: none;
+}
+
+#curious {
+	margin: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	background-image: none;
+	float: none;
+}
+
+#baseball {
+	margin: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	background-image: none;
+	float: none;
+}
+
+#schedule {
+	margin: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	background-image: none;
+	float: none;
+}
+
+#extra {
+	display: none;
+	margin: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	background-image: url("./images/me.jpg");
+	background-size: contain;
+	float: none;
+}
+.menu {
+	opacity: 100;
+}
+
+#about {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
 }
