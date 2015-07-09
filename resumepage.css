@@ -40,14 +40,11 @@ span {
 }
 
 .projects {
-	display: inline-block;
 	text-align: center;
 	line-height: 3.5cm;
 	vertical-align: middle;
 	width: 3cm;
 	height:3cm;
-/*	width: 3.5cm;
-	height: 3.5cm;*/
 }
 
 .menu {
@@ -60,7 +57,6 @@ span {
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-left: 25%;
-	/*float: left;*/
 	border-radius: 5cm 0cm 0 0cm;
 }
 
@@ -68,8 +64,6 @@ span {
 	/*background-color: blue;*/
 	background-image: url("./images/baseball.png");
 	background-size: contain;
-	/*margin-left: 20%; */
-	/*float: right;*/
 	border-radius: 0 5cm 0 0
 }
 
@@ -79,7 +73,6 @@ span {
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-left: 25%;
-	/*float: left;*/
 	border-radius: 0 0 0 5cm
 }
 
@@ -88,8 +81,6 @@ span {
 	background-image: url("./images/me.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	/*margin-left: 20%; */
-	/*float: right;*/
 	border-radius: 0 0 5cm 0
 }
 
@@ -112,7 +103,11 @@ span {
 }
 
 #portal {
+	clear: none;
 	height: 5cm;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .projects {
@@ -146,9 +141,11 @@ span {
 		margin: 0;
 		padding: 0;
 	}
-nav br {
-	display: inline;
-}
+
+
+	nav br {
+		display: inline;
+	}
 
 
 	header {
@@ -161,27 +158,26 @@ nav br {
 	}
 
 
-.contact {
-	top: 18px;
-	z-index: -1;
-	position: relative;
-	/*position: relative;*/
-	display: inline;
-}
+`	
+	.landscapeContent {
+		margin-left: 20%;
+	}
 
-.landscapeContent {
-	margin-left: 20%;
-}
-
-
-
-
-/*
-	body br {
-		display: none;
-	}*/
 
 	.divider {
+		display: none;
+	}
+
+	.portal {
+		display: inline-block;
+	}
+
+	.projects {
+		padding: 0;
+		margin: 0;
+	}
+
+	#portal br {
 		display: none;
 	}
 
@@ -190,6 +186,22 @@ nav br {
 		margin-top: 1%;
 		margin-left: 10%;
 		margin-right: 10%;
+	}
+
+	#curious {
+		margin-left: 25%;
+	}
+
+	#baseball {
+		margin-left: 2%;
+	}
+
+	#schedule {
+		margin-left: 2%;
+	}
+
+	#extra {
+		margin-left: 2%;
 	}
 
 	footer {
