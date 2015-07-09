@@ -3,9 +3,9 @@ body {
 	font-size: 20px;
 }
 
-#navbar-fixed {
-		display: none;
-	}
+.contact {
+	display: none;
+}
 
 header {
 	text-align: center;
@@ -146,17 +146,13 @@ span {
 		margin: 0;
 		padding: 0;
 	}
+nav br {
+	display: inline;
+}
 
-	#landscapeContact {
-		position: relative;
-		z-index: -1;
-		top: 40px;
-		margin-left: 10%;
-		display: inline;
-		white-space: nowrap;
-	}
 
 	header {
+		z-index: 1;
 		position: fixed;
 		width: 100%;
 		height: 1cm;
@@ -164,16 +160,34 @@ span {
 		color: gray;
 	}
 
+
+.contact {
+	top: 18px;
+	z-index: -1;
+	position: relative;
+	/*position: relative;*/
+	display: inline;
+}
+
+.landscapeContent {
+	margin-left: 20%;
+}
+
+
+
+
+/*
 	body br {
 		display: none;
-	}
+	}*/
 
 	.divider {
 		display: none;
 	}
 
 	#about {
-		margin-top: 9%;
+		padding: 0;
+		margin-top: 1%;
 		margin-left: 10%;
 		margin-right: 10%;
 	}
