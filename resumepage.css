@@ -134,14 +134,6 @@ span {
 
 }
 
-@media only screen and (max-width:	519px) {
-
-.projects {
-	width: 1.5cm;
-	height: 1.5cm;
-}
-
-}
 
 @media only screen and (max-width:	414px) and (orientation: portrait){
 	body {
