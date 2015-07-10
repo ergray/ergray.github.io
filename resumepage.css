@@ -135,7 +135,7 @@ span {
 }
 
 #circleContainer {
-	margin-left: 0;
+	margin-left: 40%;
 }
 #extra {
 	border-radius: 0;
@@ -216,6 +216,9 @@ span {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
+	#circleContainer {
+		margin-left: 0%;
+	}
 
 	#curious {
 		margin-left: 25%;
@@ -285,6 +288,10 @@ span {
 	clear: all;
 	margin-left: 0%;
 	margin-right: 0%;
+}
+
+#circleContainer {
+	margin-left: 0%;
 }
 
 .projects {
