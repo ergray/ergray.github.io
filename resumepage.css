@@ -4,6 +4,10 @@ body {
 	font-size: 20px;
 }
 
+	.landscapeContent {
+		display: none;
+	}
+
 
 .contact {
 	display: none;
