@@ -1,7 +1,9 @@
 body {
+	/*width: 100%;*/
 	background-color: #C0C0C0;
 	font-size: 20px;
 }
+
 
 .contact {
 	display: none;
@@ -28,10 +30,12 @@ footer {
 }
 
 #portal {
+	display: inline-block;
+	width: 50%;
 	height: 7cm;
-	clear: all;
-	margin-left: 30%;
-	margin-right: 30%;
+	/*clear: all;*/
+	margin-left: 25%;
+	margin-right: 25%;
 }
 
 span {
@@ -40,11 +44,17 @@ span {
 }
 
 .projects {
+	margin: 0%;
 	text-align: center;
 	line-height: 3.5cm;
 	vertical-align: middle;
+	display: inline-block;
 	width: 3cm;
 	height:3cm;
+}
+
+#circleContainer {
+	margin-left: 25%;
 }
 
 .menu {
@@ -56,7 +66,7 @@ span {
 	background-image: url("./images/map.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin-left: 25%;
+	/*margin-left: 25%;*/
 	border-radius: 5cm 0cm 0 0cm;
 }
 
@@ -64,6 +74,7 @@ span {
 	/*background-color: blue;*/
 	background-image: url("./images/baseball.png");
 	background-size: contain;
+	/*margin-right: 25%;*/
 	border-radius: 0 5cm 0 0
 }
 
@@ -72,7 +83,7 @@ span {
 	background-image: url("./images/schedule.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin-left: 25%;
+	/*margin-left: 25%;*/
 	border-radius: 0 0 0 5cm
 }
 
@@ -119,6 +130,9 @@ span {
 
 }
 
+#circleContainer {
+	margin-left: 0;
+}
 #extra {
 	border-radius: 0;
 }
@@ -143,9 +157,10 @@ span {
 	}
 
 
-	nav br {
+
+/*	nav br {
 		display: inline;
-	}
+	}*/
 
 
 	header {
@@ -157,10 +172,20 @@ span {
 		color: gray;
 	}
 
-
-`	
+/*	.contact {
+		position: relative;
+		clear: none;
+		width: 100%;
+		left: 25%;
+		top: 30px;
+		display: inline;
+	}*/
+	
 	.landscapeContent {
-		margin-left: 20%;
+		width: 100%;
+		margin-top: 5%;
+		text-align: center;
+		display: inline-block;
 	}
 
 
@@ -183,7 +208,7 @@ span {
 
 	#about {
 		padding: 0;
-		margin-top: 1%;
+		margin-top: 5%;
 		margin-left: 10%;
 		margin-right: 10%;
 	}
