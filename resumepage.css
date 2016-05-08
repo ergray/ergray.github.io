@@ -1,346 +1,61 @@
-body {
-	/*width: 100%;*/
-	background-color: #C0C0C0;
-	font-size: 20px;
-}
-
-	.landscapeContent {
-		display: none;
-	}
-
-
-.contact {
-	display: none;
-}
-
-header {
-	text-align: center;
-}
-
-footer {
-	text-align: center;
-}
-
-.divider {
-	border-style: solid;
-	border-color: black;
-	width: 60%;
-	margin-left: 20%;
-}
-
-#about {
-	margin-left: 30%;
-	margin-right: 30%;
-}
-
-#portal {
-	display: inline-block;
-	width: 50%;
-	height: 7cm;
-	/*clear: all;*/
-	margin-left: 25%;
-	margin-right: 25%;
-}
-
-span {
-	height: 60%;
-	line-height: 60%;
-}
-
-.projects {
-	margin: 0%;
-	text-align: center;
-	line-height: 3.5cm;
-	vertical-align: middle;
-	display: inline-block;
-	width: 3cm;
-	height:3cm;
-}
-
-#circleContainer {
-	margin-left: 25%;
-}
-
-.menu {
-	opacity: 0;
-}
-
-#curious {
-	/*background-color: red;*/
-	background-image: url("./images/map.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	/*margin-left: 25%;*/
-	border-radius: 5cm 0cm 0 0cm;
-}
-
-#baseball {
-	/*background-color: blue;*/
-	background-image: url("./images/baseball.png");
-	background-size: contain;
-	/*margin-right: 25%;*/
-	border-radius: 0 5cm 0 0
-}
-
-#schedule {
-	/*background-color: green;*/
-	background-image: url("./images/schedule.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	/*margin-left: 25%;*/
-	border-radius: 0 0 0 5cm
-}
-
-#extra {
-	/*background-color: yellow;*/
-	background-image: url("./images/me.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	border-radius: 0 0 5cm 0
-}
-
-@media only screen and (max-width:	936px) {
-
-
-#about {
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-}
-
-@media only screen and (max-width:	771px) {
-
-
-#about {
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-#portal {
-	clear: none;
-	height: 5cm;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.projects {
-	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-	width: 2cm;
-	height: 2cm;
-
-}
-
-#circleContainer {
-	margin-left: 40%;
-}
-#extra {
-	border-radius: 0;
-}
-
-#curious {
-	border-radius: 0;
-}
-
-#baseball {
-	border-radius: 0;
-}
-
-#schedule {
-	border-radius: 0;
-}
-}
-
-@media only screen and (max-width: 736px) and (orientation: landscape){
+@media screen and (max-width: 320px) {
 	body {
+		background-color: #FF2400;
+		width: 100%;
+		/*height: 100%;*/
 		margin: 0;
-		padding: 0;
+		vertical-align: center
 	}
 
-
-
-/*	nav br {
-		display: inline;
-	}*/
-
-
-	header {
-		z-index: 1;
-		position: fixed;
+	#topBar {
+		background-color: #837E7C;
 		width: 100%;
-		height: 1cm;
-		background-color: black;
-		color: gray;
-	}
-
-/*	.contact {
-		position: relative;
-		clear: none;
-		width: 100%;
-		left: 25%;
-		top: 30px;
-		display: inline;
-	}*/
-	
-	.landscapeContent {
-		width: 100%;
-		margin-top: 5%;
+		height: 80px;
 		text-align: center;
+		vertical-align: center
+	}
+
+	#topBar h1 {
+		position: absolute;
+		background-color: blue;
+		width: 100%;
+		height:40px;
+	}
+
+	.frontPContainer {
+		text-align: center;
+		height: 122px;
+		line-height: 110px;
+	}
+
+	.frontContainer {
 		display: inline-block;
+		line-height: normal;
 	}
-
-
-	.divider {
-		display: none;
-	}
-
-	.portal {
-		display: inline-block;
-	}
-
-	.projects {
-		padding: 0;
-		margin: 0;
-	}
-
-	#portal br {
-		display: none;
-	}
+}
 
 	#about {
-		padding: 0;
-		margin-top: 5%;
-		margin-left: 10%;
-		margin-right: 10%;
+		background-color: white;
 	}
-	#circleContainer {
-		margin-left: 0%;
+
+	#adventure {
+		background-color: gray;
 	}
 
 	#curious {
-		margin-left: 25%;
+		background-color: green;
 	}
 
-	#baseball {
-		margin-left: 2%;
+	#employee {
+		background-color: purple;
 	}
 
-	#schedule {
-		margin-left: 2%;
+	#bottomBar {
+		position: absolute;
+		bottom: 0;
+		background-color: #837E7C;
+		width: 100%;
+		height: 80px;
+		text-align: center;
+		vertical-align: center		
 	}
-
-	#extra {
-		margin-left: 2%;
-	}
-
-	footer {
-		display: none;
-	}
-}
-
-@media only screen and (max-width:	519px) {
-
-
-.projects {
-	width: 1.75cm;
-	height: 1.75cm;
-}
-
-#about {
-	margin-left: 0%;
-	margin-right: 0%;
-}
-
-}
-
-@media only screen and (max-width:	456px) {
-
-
-	.projects {
-		width: 1.5cm;
-		height: 1.5cm;
-	}
-}
-
-@media only screen and (max-width:	414px) and (orientation: portrait){
-
-
-	body {
-		width: 95%;
-		font-size: 21px;
-	}
-
-.divider {
-	display: none;
-}
-
-span {
-	height: 100%;
-	line-height: 100%
-}
-
-#portal {
-	width: 100%;
-	height: 4.5cm;
-	clear: all;
-	margin-left: 0%;
-	margin-right: 0%;
-}
-
-#circleContainer {
-	margin-left: 0%;
-}
-
-.projects {
-	background-color: white;
-	height: 1cm;
-	width: 100%;
-	border: 3px solid;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 175%;
-	float: none;
-}
-
-#curious {
-	margin: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	background-image: none;
-	float: none;
-}
-
-#baseball {
-	margin: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	background-image: none;
-	float: none;
-}
-
-#schedule {
-	margin: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	background-image: none;
-	float: none;
-}
-
-#extra {
-	display: none;
-	margin: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	background-image: url("./images/me.jpg");
-	background-size: contain;
-	float: none;
-}
-.menu {
-	opacity: 100;
-}
-
-#about {
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
-}
