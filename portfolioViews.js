@@ -35,7 +35,6 @@ var FrontPage = Backbone.View.extend({
 	},
 
 	selectView: function(e){
-		console.log(e.target.id);
 		this.undelegateEvents();
 		var userFocus = new UserFocus({focus: e.target.id})
 	}	
@@ -67,8 +66,9 @@ var UserFocus = Backbone.View.extend({
 			)
 			return
 		} else if (destination === 'adventure'){
+			var begin = new app.Begin({el: $('#anchor')});
 			$("#mainContainer").append(
-				"<div>adventure</div>"+
+			// 	// "<div>adventure</div>"+
 				"<div id='bottomBar'>Back</div>"
 			)
 		} else if (destination === 'curious'){
