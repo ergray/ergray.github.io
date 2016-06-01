@@ -129,7 +129,7 @@ var UserFocus = Backbone.View.extend({
 						"interest. Users would be able to take photos of locations, upload them "+
 						"via the application, and see the new markers appear on the map."+
 					"</p>"+
-					"<a href='http://curious-cities.herokuapp.com/'><img class='rightIMG' src='./images/citycapture.png'></a>"+
+					"<a href='http://curious-cities.herokuapp.com/'><img class='rightIMG' src='./images/citycapture.PNG'></a>"+
 					"<p>"+
 						"This project was built in Javascript and relies heavily on the framework "+
 						"Backbone. We used the Google Maps API to create the mapping portion, as well "+
@@ -155,7 +155,7 @@ var UserFocus = Backbone.View.extend({
 						"basic profile for an employee which kept track of their name, shift "+
 						"worked, and total number of hours worked per week."+
 					"</p>"+
-					"<a href='http://ergray.github.io/scheduler/fivepoints.html'><img class='rightIMG' src='./images/captureOfSchedule.png'></a>"+
+					"<a href='http://ergray.github.io/scheduler/fivepoints.html'><img class='rightIMG' src='./images/captureOfSchedule.PNG'></a>"+
 					"<p>"+
 						"I built this project in Javascript, and am the sole contributor. The framework "+
 						"used is Backbone. I wrote server code for this with Node.js and for the final "+
