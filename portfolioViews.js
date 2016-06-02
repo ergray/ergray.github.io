@@ -61,7 +61,7 @@ var UserFocus = Backbone.View.extend({
 	showThis: function(destination){
 		if (destination === 'about'){
 			$("#mainContainer").append(
-				"<div id='aboutMeContainer'>"+
+				"<div id='descriptionOfProject'>"+
 					"<p>"+
 						"As a developer I have always been something more of a hobbyist. I love "+
 						"creating small projects and seeing them run. In 2015 I attended and "+
@@ -79,6 +79,7 @@ var UserFocus = Backbone.View.extend({
 						"<li>jQuery</li>"+
 						"<li>SQL</li>"+
 						"<li>Github</li>"+
+						"<li>SCSS</li>"+
 						"</ul>"+
 				"</div>"+
 				"<div id='bottomBar'><div>Back</div></div>"
