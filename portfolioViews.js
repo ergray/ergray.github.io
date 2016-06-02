@@ -80,7 +80,7 @@ var UserFocus = Backbone.View.extend({
 						"<li>SQL</li>"+
 						"<li>Github</li>"+
 						"<li>SCSS</li>"+
-						"</ul>"+
+						"</ul><br>"+
 				"</div>"+
 				"<div id='bottomBar'><div>Back</div></div>"
 			)
@@ -114,7 +114,7 @@ var UserFocus = Backbone.View.extend({
 					"</span><br><br>"+
 					"<span>"+
 						"A live version of the project is located here: <a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'>Mundane Hero</a>"+
-					"</span>"+
+					"</span><br>"+
 
 				"</div>"+
 				"<div id='bottomBar'><div>Back</div></div>"
@@ -143,7 +143,7 @@ var UserFocus = Backbone.View.extend({
 					"</span><br><br>"+
 					"<span>"+
 						"A live version of the project is located here: <a href='http://curious-cities.herokuapp.com/'>Curious Cities</a>"+
-					"</span>"+
+					"</span><br>"+
 				"</div>"+
 				"<div id='bottomBar'><div>Back</div></div>"
 			)
