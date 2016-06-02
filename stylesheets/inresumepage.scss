@@ -1,5 +1,3 @@
-/*hihihi*/
-
 @mixin breakpoint($point) {
     @if $point == xs {
         @media (max-width:767px) { @content; }
