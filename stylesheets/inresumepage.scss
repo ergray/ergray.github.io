@@ -40,14 +40,13 @@
 	}
 
 	#topBar h1 {
-		background-color: blue;
 		width: 100%;
 		height:40px;
 	}
 
 	#mainContainer {
 		text-align: center;
-		display: flex;
+		display: inline-flex;
 		flex-direction: column;
 		justify-content: center;
 		width: 100%;
@@ -71,8 +70,6 @@
 	}
 */
 	#descriptionOfProject {
-		height: 315px;
-		overflow: scroll;
 		padding: 4px;
 		text-align: left;
 	}
@@ -117,18 +114,11 @@
 	#bottomBar {
 		font-size: 200%;
 		font-weight: bold;
-		position: absolute;
-		bottom: 0;
 		background-color: #837E7C;
-		width: 97%;
+		width: 99%;
 		height: 80px;
 		text-align: center;
-		vertical-align: center;
-		border: solid black 5px;	
-	}
-
-	#bottomBar div {
-		padding-top: 15px;
-		position: absolute;
-		width: 100%;
+		display: flex;
+		justify-content: center	;
+		align-items: center;	
 	}
