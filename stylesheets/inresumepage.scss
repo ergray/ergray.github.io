@@ -1,9 +1,6 @@
 @mixin breakpoint($point) {
-    @if $point == xs {
-        @media (max-width:767px) { @content; }
-    }
     @if $point == sm {
-        @media (min-width:768px) { @content; }
+        @media (min-width:361px) { @content; }
     }
     @if $point == md {
         @media (min-width:960px) { @content; }
@@ -14,42 +11,70 @@
 }
 
 	body {
+		font-family: Helvetica, Arial, Sans-Serif;
 		font-size: 16px;
-		background-color: #FF2400;
-		width: 100%;
-		margin: 0;
-		vertical-align: center
+	}
+
+	ul {
+		line-height: 150%
+	}
+
+	h1 {
+		font-size: 250%
+	}
+
+	h2 {
+		font-size: 200%
+	}
+
+	a {
+		line-height: 120%
 	}
 
 	#topBar {
-		background-color: #837E7C;
-		width: 100%;
-		height: 80px;
 		text-align: center;
-		vertical-align: center
+		align-items: center;
+		display: flex;
+		background-color: #837E7C;
+		height: 80px;
 	}
 
 	#topBar h1 {
-		position: absolute;
 		background-color: blue;
 		width: 100%;
 		height:40px;
 	}
 
-	.frontPContainer {
+	#mainContainer {
 		text-align: center;
-		height: 122px;
-		line-height: 110px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
 	}
 
+	.frontPContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		margin: 5px auto 5px auto;
+		width: 90%;
+		height: 200px;
+		background-position: center;
+	}
+
+/*
 	.frontContainer {
+		width: 100%;
 		display: none
 	}
-
+*/
 	#descriptionOfProject {
-		height: 295px;
+		height: 315px;
 		overflow: scroll;
 		padding: 4px;
+		text-align: left;
 	}
 
 	.rightIMG {
@@ -57,37 +82,37 @@
 		margin: 10px;
 	}
 
-	#about {
-		height: 122px;
-		width: 100%;
-		background-size: cover;
-		background-image: url("./images/editedme3.png");
-	}
 
-	#adventure {
-		height: 122px;
-		width: 100%;
+#about {
 		background-size: cover;
-		background-image: url("./images/chooseit.png");
+		background-position: center;
+		background-image: url("./images/testMe.jpg");
+
+		p {
+			display: none
+		}
+	}
+	#adventure {
+		width: 87%;
+		border: .5em solid black;
+		background: white
 	}
 
 	#curious {
-		height: 122px;
-		width: 100%;
 		background-size: cover;
-		background-image: url("./images/curiousTitle.png");
+		background-position: left top;
+		background-image: url("./images/curiousLarger.png");
+
+		p {
+			display: none
+		}
 	}
 
 	#employee {
-		height: 122px;
-		width: 100%;
-		background-size: cover;
-		background-image: url("./images/employeeSchedule.png");
-
-
-
+		line-height: 50px;
+		border: .5em solid black;
+		background: white
 	}
-
 
 	#bottomBar {
 		font-size: 200%;
