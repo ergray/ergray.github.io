@@ -22,13 +22,14 @@ var FrontPage = Backbone.View.extend({
 					"<p class='frontContainer' >About</p>"+
 				"</div>"+
 				"<div class='frontPContainer' id='adventure'>"+
-					"<p class='frontContainer'>Choose Your Own Adventure</p>"+
+					"<H2>Mundane Hero</H2>"+
+					"<p class='frontContainer'>A Choose Your Own Adventure Game with Character</p>"+
 				"</div>"+
 				"<div class='frontPContainer' id='curious'>"+
 					"<p class='frontContainer'>Curious Cities</p>"+
 				"</div>"+
 				"<div class='frontPContainer' id='employee'>"+
-					"<p class='frontContainer'>Employee Scheduler for a Small Business</p>"+
+					"<H2>Employee Scheduler for a Small Business</H2>"+
 				"</div>"+
 			"</div>"
 			)
@@ -36,7 +37,11 @@ var FrontPage = Backbone.View.extend({
 
 	selectView: function(e){
 		this.undelegateEvents();
-		var userFocus = new UserFocus({focus: e.target.id})
+		if (e.target.id === ""){
+			var userFocus = new UserFocus({focus: $(e.target).parent()[0].id})
+		} else {
+		 var userFocus = new UserFocus({focus: e.target.id})
+		}
 	}	
 })
 
@@ -69,8 +74,9 @@ var UserFocus = Backbone.View.extend({
 						"closed, I also spent time as a teacher's assistant. Currently I am looking "+
 						"to increase my skills even further and find work where I can put those "+
 						"skills to good use, and beyond the realm of hobby."+
-					"</p>"+
+					"</p><br>"+
 						"<ul>I currently have some understanding of the following:"+
+						"<br>"+
 						"<li>Javascript</li>"+
 						"<li>HTML</li>"+
 						"<li>CSS</li>"+
@@ -80,7 +86,7 @@ var UserFocus = Backbone.View.extend({
 						"<li>SQL</li>"+
 						"<li>Github</li>"+
 						"<li>SCSS</li>"+
-						"</ul><br>"+
+						"</ul>"+
 				"</div>"+
 				"<div id='bottomBar'><div>Back</div></div>"
 			)
@@ -94,21 +100,21 @@ var UserFocus = Backbone.View.extend({
 						"as well as jQuery. The logic was written by myself and the basic design "+
 						"is my own layout. The CSS was was written with assistance of Gregor "+
 						"Holzmann."+
-					"</p>"+
-					"<a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'><img src='./images/CYOACap.png'></a>"+
-					"<p>"+
+					"</p><br>"+
+					"<a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'><img src='./images/CYOACap.png'></a><br>"+
+					"<br><p>"+
 						"Although a relatively simple idea, Mundane Hero has a twist in that "+
 						"prior to beginning the game, the player is asked to answer a series of "+
 						"questions. These questions determine certain attributes the player has "+
 						"and consequently, open up pathways in-game that may not be available "+
 						"otherwise. This makes multiple playthroughs feel a bit more unique."+
-					"</p>"+
+					"</p><br>"+
 					"<p>"+
 						"In this project, Backbone does most of the heavy lifting. All of the "+
 						"answers and questions are listed in a primary collection, and fed to "+
 						"the site via Backbone events. The game is a single page application "+
 						"and thanks to Backbone, delivers content to the user very quickly."+
-					"</p>"+
+					"</p><br>"+
 					"<span>"+
 						"You can find the github project here: <a href='https://github.com/ergray/mundanehero'>Github Project</a>"+
 					"</span><br><br>"+
@@ -129,7 +135,7 @@ var UserFocus = Backbone.View.extend({
 						"they can edit with landmarks, indicating locations of scenic, quirky "+
 						"interest. Users would be able to take photos of locations, upload them "+
 						"via the application, and see the new markers appear on the map."+
-					"</p>"+
+					"</p><br>"+
 					"<a href='http://curious-cities.herokuapp.com/'><img class='rightIMG' src='./images/citycapture.PNG'></a>"+
 					"<p>"+
 						"This project was built in Javascript and relies heavily on the framework "+
@@ -137,7 +143,7 @@ var UserFocus = Backbone.View.extend({
 						"as Amazon to host our images. My contribution to this project was largely "+
 						"organizing and writing the Backbone views and learning how to incorporate them "+
 						"into the Google API."+
-					"</p>"+
+					"</p><br>"+
 					"<span>"+
 						"You can find the github project here: <a href='https://github.com/guerilla-spectacles/test-curious-cities'>Github Project</a>"+
 					"</span><br><br>"+
@@ -155,7 +161,7 @@ var UserFocus = Backbone.View.extend({
 						"a cafe I frequent. He wanted something very simple where he could create a "+
 						"basic profile for an employee which kept track of their name, shift "+
 						"worked, and total number of hours worked per week."+
-					"</p>"+
+					"</p><br>"+
 					"<a href='http://ergray.github.io/scheduler/fivepoints.html'><img class='rightIMG' src='./images/captureOfSchedule.PNG'></a>"+
 					"<p>"+
 						"I built this project in Javascript, and am the sole contributor. The framework "+
