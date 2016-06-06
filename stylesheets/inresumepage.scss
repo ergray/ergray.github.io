@@ -15,6 +15,9 @@
 		font-size: 16px;
 	}
 
+	#anchor {
+	}
+
 	ul {
 		line-height: 150%
 	}
@@ -46,9 +49,9 @@
 
 	#mainContainer {
 		text-align: center;
-		display: inline-flex;
+		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		width: 100%;
 	}
 
@@ -63,13 +66,8 @@
 		background-position: center;
 	}
 
-/*
-	.frontContainer {
-		width: 100%;
-		display: none
-	}
-*/
 	#descriptionOfProject {
+		flex: 1;
 		padding: 4px;
 		text-align: left;
 	}
@@ -112,6 +110,7 @@
 	}
 
 	#bottomBar {
+		align-self: flex-end;
 		font-size: 200%;
 		font-weight: bold;
 		background-color: #837E7C;

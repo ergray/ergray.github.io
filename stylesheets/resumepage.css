@@ -27,9 +27,9 @@ a {
 
 #mainContainer {
   text-align: center;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%; }
 
 .frontPContainer {
@@ -42,13 +42,8 @@ a {
   height: 200px;
   background-position: center; }
 
-/*
-	.frontContainer {
-		width: 100%;
-		display: none
-	}
-*/
 #descriptionOfProject {
+  flex: 1;
   padding: 4px;
   text-align: left; }
 
@@ -81,6 +76,7 @@ a {
   background: white; }
 
 #bottomBar {
+  align-self: flex-end;
   font-size: 200%;
   font-weight: bold;
   background-color: #837E7C;
