@@ -1,3 +1,5 @@
 $(document).ready(function(){
-	var frontPage = new FrontPage();
+	var router = new Router();
+	Backbone.history.start();
+//	var frontPage = new FrontPage();
 })
