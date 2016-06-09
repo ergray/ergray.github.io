@@ -31,6 +31,9 @@ a {
   flex-direction: column;
   justify-content: space-between;
   width: 100%; }
+  @media (min-width: 960px) {
+    #mainContainer {
+      display: block; } }
 
 .frontPContainer {
   display: flex;
@@ -41,6 +44,10 @@ a {
   width: 90%;
   height: 200px;
   background-position: center; }
+  @media (min-width: 960px) {
+    .frontPContainer {
+      display: block;
+      margin: 0; } }
 
 #descriptionOfProject {
   flex: 1;
@@ -53,15 +60,33 @@ a {
 
 #about {
   background-size: cover;
-  background-position: center;
   background-image: url("./images/testMe.jpg"); }
   #about p {
     display: none; }
+  @media (min-width: 616px) {
+    #about {
+      background-position: center;
+      background-image: url("./images/smlz.jpg"); } }
+  @media (min-width: 960px) {
+    #about {
+      height: 400px;
+      width: 40%;
+      float: left;
+      clear: bottom;
+      background-position: center;
+      background-image: url("./images/smlz.jpg"); } }
 
 #adventure {
   width: 87%;
   border: .5em solid black;
   background: white; }
+  @media (min-width: 616px) {
+    #adventure {
+      width: 88.5%; } }
+  @media (min-width: 960px) {
+    #adventure {
+      float: right;
+      width: 58%; } }
 
 #curious {
   background-size: cover;
@@ -69,11 +94,23 @@ a {
   background-image: url("./images/curiousLarger.png"); }
   #curious p {
     display: none; }
+  @media (min-width: 960px) {
+    #curious {
+      width: 60%;
+      float: right; } }
 
 #employee {
+  width: 87%;
   line-height: 50px;
   border: .5em solid black;
   background: white; }
+  @media (min-width: 616px) {
+    #employee {
+      width: 88.5%; } }
+  @media (min-width: 960px) {
+    #employee {
+      width: 58%;
+      float: right; } }
 
 #bottomBar {
   align-self: flex-end;
