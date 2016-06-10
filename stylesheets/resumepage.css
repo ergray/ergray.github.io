@@ -33,7 +33,7 @@ a {
   width: 100%; }
   @media (min-width: 960px) {
     #mainContainer {
-      display: block; } }
+      display: inline; } }
 
 .frontPContainer {
   display: flex;
@@ -46,7 +46,7 @@ a {
   background-position: center; }
   @media (min-width: 960px) {
     .frontPContainer {
-      display: block;
+      display: inline;
       margin: 0; } }
 
 #descriptionOfProject {
@@ -69,12 +69,13 @@ a {
       background-image: url("./images/smlz.jpg"); } }
   @media (min-width: 960px) {
     #about {
-      height: 400px;
+      margin: 10px;
+      height: 671px;
       width: 40%;
       float: left;
       clear: bottom;
       background-position: center;
-      background-image: url("./images/smlz.jpg"); } }
+      background-image: url("./images/bikenormal.jpg"); } }
 
 #adventure {
   width: 87%;
@@ -85,8 +86,11 @@ a {
       width: 88.5%; } }
   @media (min-width: 960px) {
     #adventure {
-      float: right;
-      width: 58%; } }
+      margin: 10px;
+      width: 53%;
+      float: right; }
+      #adventure h2 {
+        margin-top: 75px; } }
 
 #curious {
   background-size: cover;
@@ -96,12 +100,12 @@ a {
     display: none; }
   @media (min-width: 960px) {
     #curious {
-      width: 60%;
+      margin: 10px;
+      width: 54.5%;
       float: right; } }
 
 #employee {
   width: 87%;
-  line-height: 50px;
   border: .5em solid black;
   background: white; }
   @media (min-width: 616px) {
@@ -109,8 +113,11 @@ a {
       width: 88.5%; } }
   @media (min-width: 960px) {
     #employee {
-      width: 58%;
-      float: right; } }
+      margin: 10px;
+      width: 53%;
+      float: right; }
+      #employee h2 {
+        margin-top: 75px; } }
 
 #bottomBar {
   align-self: flex-end;

@@ -55,7 +55,7 @@
 		width: 100%;
 
 		@include breakpoint(md){
-			display: block
+			display: inline
 		}
 	}
 
@@ -70,7 +70,7 @@
 		background-position: center;
 
 		@include breakpoint(md){
-			display: block;
+			display: inline;
 			margin: 0;
 		}
 	}
@@ -101,12 +101,13 @@
 		}
 
 		@include breakpoint(md){
-			height: 400px;
+			margin: 10px;
+			height: 671px;
 			width: 40%;
 			float: left;
 			clear: bottom;
 			background-position: center;
-			background-image: url("./images/smlz.jpg")
+			background-image: url("./images/bikenormal.jpg")
 		}
 	}
 	#adventure {
@@ -119,8 +120,13 @@
 		};
 
 		@include breakpoint(md){
+			margin: 10px;
+			width: 53%;
 			float: right;
-			width: 58%
+
+			h2 {
+				margin-top: 75px
+			}
 		}
 	}
 
@@ -134,24 +140,29 @@
 		};
 
 		@include breakpoint(md){
-			width: 60%;
-			float: right
+			margin: 10px;
+			width: 54.5%;
+			float: right;
 		}
 	}
 
 	#employee {
 		width: 87%;
-		line-height: 50px;
 		border: .5em solid black;
 		background: white;
 
 		@include breakpoint(sm){
 			width: 88.5%;
-		}
+		};
 
 		@include breakpoint(md){
-			width: 58%;
+			margin: 10px;
+			width: 53%;
 			float: right;
+
+			h2 {
+				margin-top: 75px
+			}
 		}
 	}
 
