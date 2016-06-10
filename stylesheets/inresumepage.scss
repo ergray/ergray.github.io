@@ -1,6 +1,6 @@
 @mixin breakpoint($point) {
     @if $point == sm {
-        @media (min-width:361px) { @content; }
+        @media (min-width:616px) { @content; }
     }
     @if $point == md {
         @media (min-width:960px) { @content; }
@@ -53,6 +53,10 @@
 		flex-direction: column;
 		justify-content: space-between;
 		width: 100%;
+
+		@include breakpoint(md){
+			display: inline
+		}
 	}
 
 	.frontPContainer {
@@ -64,6 +68,11 @@
 		width: 90%;
 		height: 200px;
 		background-position: center;
+
+		@include breakpoint(md){
+			display: inline;
+			margin: 0;
+		}
 	}
 
 	#descriptionOfProject {
@@ -80,17 +89,45 @@
 
 #about {
 		background-size: cover;
-		background-position: center;
 		background-image: url("./images/testMe.jpg");
 
 		p {
 			display: none
 		}
+
+		@include breakpoint(sm){
+			background-position: center;
+			background-image: url("./images/smlz.jpg")
+		}
+
+		@include breakpoint(md){
+			margin: 10px;
+			height: 671px;
+			width: 40%;
+			float: left;
+			clear: bottom;
+			background-position: center;
+			background-image: url("./images/bikenormal.jpg")
+		}
 	}
 	#adventure {
 		width: 87%;
 		border: .5em solid black;
-		background: white
+		background: white;
+
+		@include breakpoint(sm){
+			width: 88.5%;
+		};
+
+		@include breakpoint(md){
+			margin: 10px;
+			width: 53%;
+			float: right;
+
+			h2 {
+				margin-top: 75px
+			}
+		}
 	}
 
 	#curious {
@@ -100,13 +137,33 @@
 
 		p {
 			display: none
+		};
+
+		@include breakpoint(md){
+			margin: 10px;
+			width: 54.5%;
+			float: right;
 		}
 	}
 
 	#employee {
-		line-height: 50px;
+		width: 87%;
 		border: .5em solid black;
-		background: white
+		background: white;
+
+		@include breakpoint(sm){
+			width: 88.5%;
+		};
+
+		@include breakpoint(md){
+			margin: 10px;
+			width: 53%;
+			float: right;
+
+			h2 {
+				margin-top: 75px
+			}
+		}
 	}
 
 	#bottomBar {
