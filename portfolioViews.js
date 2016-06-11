@@ -80,7 +80,7 @@ var MundaneView = Backbone.View.extend({
 						"is my own layout. The CSS was was written with assistance of Gregor "+
 						"Holzmann."+
 					"</p><br>"+
-					"<a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'><img src='./images/CYOACap.png'></a><br>"+
+					"<a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'><img class='centerIMG' src='./images/CYOACap.png'></a><br>"+
 					"<br><p>"+
 						"Although a relatively simple idea, Mundane Hero has a twist in that "+
 						"prior to beginning the game, the player is asked to answer a series of "+

@@ -52,11 +52,20 @@ a {
 #descriptionOfProject {
   flex: 1;
   padding: 4px;
-  text-align: left; }
+  text-align: left;
+  align-items: center;
+  margin: 2% 10% 2% 10%; }
+  @media (min-width: 616px) {
+    #descriptionOfProject {
+      margin: 5% 20% 10% 20%; } }
 
 .rightIMG {
   float: right;
   margin: 10px; }
+
+.centerIMG {
+  display: block;
+  margin: auto; }
 
 #about {
   background-size: cover;
@@ -130,5 +139,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (min-width: 616px) {
+    #bottomBar {
+      width: 100%; } }
 
 /*# sourceMappingURL=resumepage.css.map */
