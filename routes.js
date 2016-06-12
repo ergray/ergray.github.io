@@ -4,15 +4,23 @@ var Router = Backbone.Router.extend ({
 	mundane: null,
 
 	routes: {
-		"" : "tester",
+		"" : "render",
 		"adventure": "mundaneBuild",
 		"about": "aboutBuild",
 		"employee": "schedulerBuild",
 		"curious": "citiesBuild"
 	},
 
-	initialize: function(){
-		this.index = new FrontPage({router: this});
+	// initialize: function(){
+	// 	this.index = new FrontPage({router: this});
+	// },
+
+	render: function(){
+		if (this.index != null){
+		this.index.undelegateEvents();
+	};
+		$("#anchor").children().remove();
+		this.index = new FrontPage({router: this});	
 	},
 
 	mundaneBuild: function(){
@@ -29,5 +37,9 @@ var Router = Backbone.Router.extend ({
 
 	citiesBuild: function(){
 		var cities = new CuriousView();
+	},
+
+	tester: function(){
+		// this.index = new FrontPage({router: this});
 	}
 })

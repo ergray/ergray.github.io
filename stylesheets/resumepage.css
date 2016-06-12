@@ -37,6 +37,7 @@ a {
 
 .frontPContainer {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
