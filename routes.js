@@ -11,10 +11,6 @@ var Router = Backbone.Router.extend ({
 		"curious": "citiesBuild"
 	},
 
-	// initialize: function(){
-	// 	this.index = new FrontPage({router: this});
-	// },
-
 	render: function(){
 		if (this.index != null){
 		this.index.undelegateEvents();
@@ -24,22 +20,36 @@ var Router = Backbone.Router.extend ({
 	},
 
 	mundaneBuild: function(){
+		this.addMainContainer();
 		var mundane = new MundaneView()
 	},
 
 	aboutBuild: function(){
+		this.addMainContainer();
 		var about = new AboutView()
 	},
 
 	schedulerBuild: function(){
+		this.addMainContainer();
 		var schedule = new EmployeeView();
 	},
 
 	citiesBuild: function(){
+		this.addMainContainer();
 		var cities = new CuriousView();
 	},
 
-	tester: function(){
-		// this.index = new FrontPage({router: this});
+	addMainContainer: function(){
+		if($('#anchor').children().length === 0){
+			return (
+				$("#anchor").append(
+					"<div id='topBar'>"+
+						"<h1>Eric Gray - Developer</h1>"+
+					"</div>"+
+					"<div id='mainContainer'>"+
+					"</div>"
+				)
+			)
+		}
 	}
 })
