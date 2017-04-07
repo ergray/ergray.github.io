@@ -74,6 +74,7 @@ var BurgerView = Backbone.View.extend({
 			$(document).scrollTop(0);
 			$("#mainContainer").append(
 				"<div id='descriptionOfProject'>"+
+					"<br>"+
 					"<p>"+
 						"BurgerQuest is an in browser game built with Javascript, html5 canvas, "+
 						"jQuery and underscore. I built this because I love games and wanted to "+
@@ -141,6 +142,7 @@ var MundaneView = Backbone.View.extend({
     		$(document).scrollTop(0);
 			$("#mainContainer").append(
 				"<div id='descriptionOfProject'>"+
+					"<br>"+
 					"<p>"+
 						"Mundane Hero is an in-browser choose your own adventure game."+
 						"It is written in Javascript and utilizes the backbone.js framework "+
@@ -212,6 +214,7 @@ var AboutView = Backbone.View.extend({
     		$(document).scrollTop(0);
 			$("#mainContainer").append(
 				"<div id='descriptionOfProject'>"+
+					"<br>"+
 					"<p>"+
 						"I am a full stack javascript developer based out of Oakland, California, "+
 						"specializing in Javascript and the Backbone framework. I graduated from "+
@@ -268,6 +271,7 @@ var CuriousView = Backbone.View.extend({
     		$(document).scrollTop(0);
 			$("#mainContainer").append(
 				"<div id='descriptionOfProject'>"+
+					"<br>"+
 					"<p>"+
 						"Curious Cities is an application developed by myself and two classmates "+
 						"as a final project for our Front End Web Development class at Portland "+
@@ -332,6 +336,7 @@ var EmployeeView = Backbone.View.extend({
     		$(document).scrollTop(0);
 			$("#mainContainer").append(
 				"<div id='descriptionOfProject'>"+
+					"<br>"+
 					"<p>"+
 						"This application was created at the request of the owner of a small cafe I "+
 						"like to go to. He wanted something very simple that would let him keep track "+
