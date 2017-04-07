@@ -5,6 +5,7 @@ var Router = Backbone.Router.extend ({
 
 	routes: {
 		"" : "render",
+		"burgers": "burgerBuild",
 		"adventure": "mundaneBuild",
 		"about": "aboutBuild",
 		"employee": "schedulerBuild",
@@ -17,6 +18,11 @@ var Router = Backbone.Router.extend ({
 	};
 		$("#anchor").children().remove();
 		this.index = new FrontPage({router: this});	
+	},
+
+	burgerBuild: function(){
+		this.addMainContainer();
+		var burger = new BurgerView()
 	},
 
 	mundaneBuild: function(){
@@ -44,7 +50,7 @@ var Router = Backbone.Router.extend ({
 			return (
 				$("#anchor").append(
 					"<div id='topBar'>"+
-						"<h1>Eric Gray - Developer</h1>"+
+						"<h1>Eric Gray - Full Stack Javascript Developer</h1>"+
 					"</div>"+
 					"<div id='mainContainer'>"+
 					"</div>"

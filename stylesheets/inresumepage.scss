@@ -10,6 +10,16 @@
     }
 }
 
+	html {
+		/*overflow: hidden;*/
+		/*height: 100%;*/
+
+		@include breakpoint(md){
+			/*overflow-y: scroll;*/
+			/*overflow: hidden;*/ 
+		}
+	}
+
 	body {
 		font-family: Helvetica, Arial, Sans-Serif;
 		font-size: 16px;
@@ -50,41 +60,54 @@
 	#mainContainer {
 		text-align: center;
 		display: flex;
+/*		flex-direction: row; */
 		flex-direction: column;
 		justify-content: space-between;
 		width: 100%;
+		min-height: 300px;
+	/*	overflow-y: scroll; */
 
 		@include breakpoint(md){
 			display: inline
 		}
 	}
 
-	.frontPContainer {
+	#rightLinks {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-		margin: 5px auto 5px auto;
-		width: 90%;
-		height: 200px;
-		background-position: center;
+		max-height: 500px;
+		max-width: 1200px;
 
 		@include breakpoint(md){
-			display: inline;
-			margin: 0;
+			overflow-y: scroll;
 		}
 	}
 
 	#descriptionOfProject {
-		flex: 1;
-		padding: 4px;
+		display: flex;
+		flex-direction: column;
+		/*max-height: 500px;*/
+		/*max-width: 1200px;*/
+		height: 200px;
+		/*flex: 1;*/
+		/*padding: 4px;*/
 		text-align: left;
 		align-items: center;
-		margin: 2% 10% 2% 10%;
+		/*margin: 2% 10% 2% 10%;*/
+		margin: 2% 10% 0 10%;
 
 		@include breakpoint(sm){
-			margin: 5% 20% 10% 20%
+			/*margin: 5% 20% 10% 20%*/
+			margin: 5% 20% 0 20%
 		}
+
+		@include breakpoint(md){
+		/*	overflow-y: scroll; */
+		}
+	}
+
+	#bottomBar p {
+		padding-top: 20px;
 	}
 
 	.rightIMG {
@@ -97,15 +120,50 @@
 		margin: auto;
 	}
 
+.projectLinks {
+
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		margin: 5px auto 5px auto;
+		width: 600px;
+		min-height: 200px;
+		background-position: center;
+
+/* --------- */
+
+		width: 87%;
+		border: .5em solid black;
+		background: white;
+
+		@include breakpoint(sm){
+			width: 88.5%;
+		};
+
+		@include breakpoint(md){
+			margin: 10px;
+			/*width: 53%;*/
+			float: right;
+
+			h2 {
+				margin-top: 75px
+			}
+		}	
+}	
+
 
 #about {
+		/*clear: both;*/
+		border: none;
 		background-size: cover;
 		background-image: url("./images/testMe.jpg");
 
 		p {
 			display: none
 		}
-
+		
 		@include breakpoint(sm){
 			background-position: center;
 			background-image: url("./images/smlz.jpg")
@@ -113,83 +171,58 @@
 
 		@include breakpoint(md){
 			margin: 10px;
-			height: 671px;
+			height: 490px;
+			/*height: 671px;*/
 			width: 40%;
 			float: left;
-			clear: bottom;
+			/*clear: bottom;*/
 			background-position: center;
 			background-image: url("./images/bikenormal.jpg")
 		}
 	}
-	#adventure {
-		width: 87%;
-		border: .5em solid black;
-		background: white;
-
-		@include breakpoint(sm){
-			width: 88.5%;
-		};
-
-		@include breakpoint(md){
-			margin: 10px;
-			width: 53%;
-			float: right;
-
-			h2 {
-				margin-top: 75px
-			}
-		}
-	}
 
 	#curious {
-		background-size: cover;
-		background-position: left top;
+		background-color: transparent;
 		background-image: url("./images/curiousLarger.png");
+		background-size: cover; 
+		background-position: left top;
 
 		p {
 			display: none
 		};
-
-		@include breakpoint(md){
-			margin: 10px;
-			width: 54.5%;
-			float: right;
-		}
+	
 	}
 
-	#employee {
-		width: 87%;
-		border: .5em solid black;
-		background: white;
-
-		@include breakpoint(sm){
-			width: 88.5%;
-		};
-
-		@include breakpoint(md){
-			margin: 10px;
-			width: 53%;
-			float: right;
-
-			h2 {
-				margin-top: 75px
-			}
-		}
+	.full-width {
+		width: 100vw;
+		position: absolute;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
 	}
+
 
 	#bottomBar {
-		align-self: flex-end;
+		cursor: pointer;
+		/*align-self: flex-end;*/
 		font-size: 200%;
 		font-weight: bold;
 		background-color: #837E7C;
-		width: 99%;
+		/*width: 99%;*/
 		height: 80px;
 		text-align: center;
-		display: flex;
+		/*display: flex;*/
 		justify-content: center	;
 		align-items: center;	
+		/*padding-bottom: 400px;*/
+		/*position: absolute;*/
 
 		@include breakpoint(sm){
-			width: 100%;
+			/*width: 100%;*/
 		};
+
+		@include breakpoint(lg){
+			/*width: 500vw;*/
+		}
 	}

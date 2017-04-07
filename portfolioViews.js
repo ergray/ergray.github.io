@@ -4,7 +4,8 @@ var FrontPage = Backbone.View.extend({
 
 
 	events: {
-		"click .frontPContainer": "selectView"
+		"click .frontPContainer": "selectView",
+		"click .projectLinks": "selectView"
 	},
 
 	initialize: function(opts){
@@ -15,27 +16,36 @@ var FrontPage = Backbone.View.extend({
 		console.log(this.events);
 		$("#anchor").append(
 			"<div id='topBar'>"+
-				"<h1>Eric Gray - Developer</h1>"+
+				"<h1>Eric Gray - Full Stack Javascript Developer</h1>"+
 			"</div>"+
 			"<div id='mainContainer'>"+
-				"<div class='frontPContainer' id='about'>"+
-					"<p class='frontContainer' >About</p>"+
-				"</div>"+
-				"<div class='frontPContainer' id='adventure'>"+
-					"<H2>Mundane Hero</H2>"+
-					"<p class='frontContainer'>A Choose Your Own Adventure Game with Character</p>"+
-				"</div>"+
-				"<div class='frontPContainer' id='curious'>"+
-					"<p class='frontContainer'>Curious Cities</p>"+
-				"</div>"+
-				"<div class='frontPContainer' id='employee'>"+
-					"<H2>Employee Scheduler for a Small Business</H2>"+
+				"<div id='leftAbout'>"+
+					"<div class='projectLinks' id='about'>"+
+						"<p>About</p>"+
+					"</div>"+
+				"</div>"+	
+				"<div id='rightLinks'>"+
+					"<div class='projectLinks' id='burgers'>"+
+						"<H2>BurgerQuest</H2>"+
+						"<p>Written with Javascript, jQuery, Underscore, and HTML Canvas</p>"+
+					"</div>"+
+					"<div class='projectLinks' id='adventure'>"+
+						"<H2>Mundane Hero</H2>"+
+						"<p>A Choose Your Own Adventure Game written with Backbone</p>"+
+					"</div>"+
+					"<div class='projectLinks' id='curious'>"+
+						"<p>Curious Cities</p>"+
+					"</div>"+
+					"<div class='projectLinks' id='employee'>"+
+						"<H2>Simple Scheduling App</H2>"+
+						"<p>Written with the Backbone Javascript framework<p>"+
+					"</div>"+
 				"</div>"+
 			"</div>"
 			)
 	},
 	
-		selectView: function(e){
+	selectView: function(e){
 		this.undelegateEvents();
 		if (e.target.id === ""){
 			var userFocus = ($(e.target).parent()[0].id)
@@ -46,6 +56,72 @@ var FrontPage = Backbone.View.extend({
 
 		Backbone.history.navigate(userFocus, {trigger: true});
 	}	
+})
+
+var BurgerView = Backbone.View.extend({
+	el: '#anchor',
+
+	events: {
+		"click #bottomBar" : "homewards"
+	},
+
+	initialize: function(opts){
+		$("#mainContainer").children().remove();
+		this.render()
+	},
+
+	render: function(){
+			$(document).scrollTop(0);
+			$("#mainContainer").append(
+				"<div id='descriptionOfProject'>"+
+					"<p>"+
+						"BurgerQuest is an in browser game built with Javascript, html5 canvas, "+
+						"jQuery and underscore. I built this because I love games and wanted to "+
+						"experiment more with user experience and html canvas. Aesthetic design "+
+						"isn't exactly one of my strong points at the moment, and I imagine myself "+
+						"in a working role of creating logic for a design team."+
+					"<br><p><br>"+
+						"<img src='./images/burgerCapture.png'/><br><br>"+
+						"This game was a lot of fun to create. I gave myself a minimum viable "+
+						"product, which was to create a moveable character that can interact with "+
+						"multiple menus, have a sort of 'fight' sequence, and deliver the result "+
+						"of this fight to a customer, which then triggers another customer to enter "+
+						"the game."+
+					"</p><br>"+
+					"<p>"+
+						"The largest challenge of the game was the movement of the character and "+
+						"customer. The methods for these actions took some re-writes, in particular "+
+						"for the customer's movement, which is controlled by a pathing method. The "+
+						"difficulty was largely in making sure that either figure was not able to "+
+						"move through what should be a solid object. I worked around this by making "+
+						"an equation for the figure to look ahead of where they were going and if "+
+						"it was a valid location to go ahead and make that move, otherwise to stay "+
+						"where they were."+
+					"</p><br>"+
+					"<p>"+
+						"Although there are no points exactly, the worker is given money, and there "+
+						"are benefits and detriments to how well food is cooked, represented by tips. "+
+						"Currently there is no use for this money, however in future iterations my "+
+						"intent is to add a mechanism for purchasing cooking tools, as well as stealing "+
+						"from the register (which will have its own consequences."+
+					"</p><br>"+	
+					"<p>"+
+						"You can find a working version of this game here: <a href='http://www.htmlsouls.com/BurgerQuest/game.html'>Burger Quest</a>"+
+					"</p><br>"+				
+					"<span>"+
+						"You can find the github project here: <a href='https://github.com/ergray/BurgerQuest'>Github Project</a>"+
+					"</span><br><br>"+
+					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+				"</div>"
+				)
+	},
+
+	homewards: function(){
+		Backbone.history.navigate("");
+		this.undelegateEvents();
+		$("#anchor").children().remove();
+		var frontPage = new FrontPage()
+	}
 })
 
 var MundaneView = Backbone.View.extend({
@@ -105,9 +181,8 @@ var MundaneView = Backbone.View.extend({
 					"<span>"+
 						"A live version of the project is located here: <a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'>Mundane Hero</a>"+
 					"</span><br>"+
-
-				"</div>"+
-				"<div id='bottomBar'><div>Back</div></div>"
+					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+				"</div>"
 			)		
 	},
 
@@ -138,9 +213,9 @@ var AboutView = Backbone.View.extend({
 			$("#mainContainer").append(
 				"<div id='descriptionOfProject'>"+
 					"<p>"+
-						"I am a front-end web developer based out of Portland, Oregon, "+
+						"I am a full stack javascript developer based out of Oakland, California, "+
 						"specializing in Javascript and the Backbone framework. I graduated from "+
-						"Portland Code School's front-end web development course in 2015. After "+
+						"Portland Code School's full stack javascript course in 2015. After "+
 						"completing that course I spent a term as a teacher's assistant. The work "+
 						"involved tutoring new students as well as grading homework. Since Portland "+
 						"Code School's closure, I have been at work on my own small projects. I tend "+
@@ -159,10 +234,11 @@ var AboutView = Backbone.View.extend({
 						"<li>Github</li>"+
 						"<li>SCSS</li>"+
 						"</ul><br>"+
-					"<p>"+
+					"<span>"+
 						"I can be reached at <a href='mailto:ericxgray@gmail.com'>ericxgray@gmail.com</a>."+
-				"</div>"+
-				"<div id='bottomBar'><div>Back</div></div>"
+					"</span><br>"+	
+					"<div id='bottomBar' class='full-width'><p>Back</p></div>"+
+				"</div>"
 			)	
 	},
 
@@ -225,8 +301,8 @@ var CuriousView = Backbone.View.extend({
 					"<span>"+
 						"A live version of the project is located here: <a href='http://curious-cities.herokuapp.com/'>Curious Cities</a>"+
 					"</span><br>"+
-				"</div>"+
-				"<div id='bottomBar'><div>Back</div></div>"
+					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+				"</div>"
 			)	
 	},
 
@@ -282,8 +358,8 @@ var EmployeeView = Backbone.View.extend({
 					"<span>"+
 						"A live version of the project is located here: <a href='http://ergray.github.io/scheduler/fivepoints.html'>Employee Schedule</a>"+
 					"</span><br>"+
-				"</div>"+
-				"<div id='bottomBar'><div>Back</div></div>"
+					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+				"</div>"
 			)		
 	},
 
