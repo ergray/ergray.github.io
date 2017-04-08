@@ -82,7 +82,7 @@ var BurgerView = Backbone.View.extend({
 						"isn't exactly one of my strong points at the moment, and I imagine myself "+
 						"in a working role of creating logic for a design team."+
 					"<br><p><br>"+
-						"<img src='./images/burgerCapture.png'/><br><br>"+
+						"<img src='./images/burgerCapture.PNG'/><br><br>"+
 						"This game was a lot of fun to create. I gave myself a minimum viable "+
 						"product, which was to create a moveable character that can interact with "+
 						"multiple menus, have a sort of 'fight' sequence, and deliver the result "+
