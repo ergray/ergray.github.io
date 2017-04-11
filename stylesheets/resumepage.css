@@ -1,11 +1,3 @@
-html {
-  /*overflow: hidden;*/
-  /*height: 100%;*/ }
-  @media (min-width: 960px) {
-    html {
-      /*overflow-y: scroll;*/
-      /*overflow: hidden;*/ } }
-
 body {
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 16px; }
@@ -36,12 +28,10 @@ a {
 #mainContainer {
   text-align: center;
   display: flex;
-  /*		flex-direction: row; */
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  min-height: 300px;
-  /*	overflow-y: scroll; */ }
+  min-height: 300px; }
   @media (min-width: 960px) {
     #mainContainer {
       display: inline; } }
@@ -58,22 +48,13 @@ a {
 #descriptionOfProject {
   display: flex;
   flex-direction: column;
-  /*max-height: 500px;*/
-  /*max-width: 1200px;*/
   height: 200px;
-  /*flex: 1;*/
-  /*padding: 4px;*/
   text-align: left;
   align-items: center;
-  /*margin: 2% 10% 2% 10%;*/
   margin: 2% 10% 0 10%; }
   @media (min-width: 616px) {
     #descriptionOfProject {
-      /*margin: 5% 20% 10% 20%*/
       margin: 5% 20% 0 20%; } }
-  @media (min-width: 960px) {
-    #descriptionOfProject {
-      /*	overflow-y: scroll; */ } }
 
 #bottomBar p {
   padding-top: 20px; }
@@ -112,7 +93,6 @@ a {
         margin-top: 75px; } }
 
 #about {
-  /*clear: both;*/
   border: none;
   background-size: cover;
   background-image: url("./images/testMe.jpg"); }
@@ -126,7 +106,6 @@ a {
     #about {
       margin: 10px;
       height: 490px;
-      /*height: 671px;*/
       width: 40%;
       float: left;
       /*clear: bottom;*/
@@ -151,23 +130,13 @@ a {
 
 #bottomBar {
   cursor: pointer;
-  /*align-self: flex-end;*/
   font-size: 200%;
   font-weight: bold;
   background-color: #837E7C;
   /*width: 99%;*/
   height: 80px;
   text-align: center;
-  /*display: flex;*/
   justify-content: center;
-  align-items: center;
-  /*padding-bottom: 400px;*/
-  /*position: absolute;*/ }
-  @media (min-width: 616px) {
-    #bottomBar {
-      /*width: 100%;*/ } }
-  @media (min-width: 1200px) {
-    #bottomBar {
-      /*width: 500vw;*/ } }
+  align-items: center; }
 
 /*# sourceMappingURL=resumepage.css.map */

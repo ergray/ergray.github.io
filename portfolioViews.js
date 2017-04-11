@@ -82,7 +82,7 @@ var BurgerView = Backbone.View.extend({
 						"isn't exactly one of my strong points at the moment, and I imagine myself "+
 						"in a working role of creating logic for a design team."+
 					"<br><p><br>"+
-						"<img src='ergray.github.io/images/burgerCapture.PNG'/><br><br>"+
+						"<img class='centerIMG' src='ergray.github.io/images/burgerCapture.PNG'/><br><br>"+
 						"This game was a lot of fun to create. I gave myself a minimum viable "+
 						"product, which was to create a moveable character that can interact with "+
 						"multiple menus, have a sort of 'fight' sequence, and deliver the result "+
@@ -216,16 +216,23 @@ var AboutView = Backbone.View.extend({
 				"<div id='descriptionOfProject'>"+
 					"<br>"+
 					"<p>"+
-						"I am a full stack javascript developer based out of Oakland, California, "+
-						"specializing in Javascript and the Backbone framework. I graduated from "+
-						"Portland Code School's full stack javascript course in 2015. After "+
-						"completing that course I spent a term as a teacher's assistant. The work "+
-						"involved tutoring new students as well as grading homework. Since Portland "+
-						"Code School's closure, I have been at work on my own small projects. I tend "+
-						"to work more towards functionality than form, and love to tinker with new "+
-						"ways of approaching problems."+
+						"I am a full stack javascript developer based out of Oakland, California. "+
+						"My programming knowledge comes from a mix of self-learning through personal "+
+						"projects, as well as having attended a 15 week javascript code school in "+
+						"Portland, Oregon. Most of my projects include backbone for a framework "+
+						"(including this portfolio), but I have done projects in Angular as well. "+
+						"My next project will include a SQL database and will use React."+
 					"</p><br>"+
-						"<ul>My current skills are as follows:"+
+					"<p>"+
+						"Coding is very exciting to me. There's a lot of work to it, and it can "+
+						"be very challenging, but I find that this challenge just pushes me to "+
+						"work harder and grow more. Although I don't consider myself much of a "+
+						"visual designer, I do enjoy making simple layouts that help emphasize "+
+						"code. While I could probably use a CMS to make my own site a bit flasher, "+
+						"I find that I prefer to build things from the ground up, and thus learn "+
+						"more about the foundations of design and programming"+
+					"</p><br>"+	
+						"<ul>My skills include:"+
 						"<br>"+
 						"<li>Javascript</li>"+
 						"<li>HTML</li>"+
@@ -233,12 +240,13 @@ var AboutView = Backbone.View.extend({
 						"<li>Backbone</li>"+
 						"<li>Node.js</li>"+
 						"<li>jQuery</li>"+
-						"<li>SQL</li>"+
+						"<li>MySQL</li>"+
 						"<li>Github</li>"+
 						"<li>SCSS</li>"+
 						"</ul><br>"+
 					"<span>"+
-						"I can be reached at <a href='mailto:ericxgray@gmail.com'>ericxgray@gmail.com</a>."+
+						"My github profile can be found at: <a href='https://github.com/ergray'>https://github.com/ergray</a> "+
+						"and I can be reached at <a href='mailto:ericxgray@gmail.com'>ericxgray@gmail.com</a>."+
 					"</span><br>"+	
 					"<div id='bottomBar' class='full-width'><p>Back</p></div>"+
 				"</div>"
