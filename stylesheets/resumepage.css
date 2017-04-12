@@ -1,6 +1,17 @@
+html {
+  height: 100%;
+  /*  @media (min-width: 1200px)  { @content; } */ }
+  @media (min-width: 960px) {
+    html {
+      overflow-y: hidden; } }
+
 body {
+  height: 100%;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 16px; }
+
+#anchor {
+  height: 100%; }
 
 ul {
   line-height: 150%; }
@@ -31,33 +42,33 @@ a {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  min-height: 300px; }
+  height: 85%;
+  /*  @media (min-width: 1200px)  { @content; } */ }
   @media (min-width: 960px) {
     #mainContainer {
-      display: inline; } }
+      height: 100%;
+      overflow-y: initial;
+      flex-direction: row; } }
+
+#leftAbout {
+  width: 97%;
+  /*  @media (min-width: 1200px)  { @content; } */ }
+  @media (min-width: 960px) {
+    #leftAbout {
+      width: 55%;
+      height: 100%; } }
 
 #rightLinks {
+  float: right;
   display: flex;
   flex-direction: column;
-  max-height: 500px;
-  max-width: 1200px; }
+  width: 97%;
+  /*  @media (min-width: 1200px)  { @content; } */ }
   @media (min-width: 960px) {
     #rightLinks {
-      overflow-y: scroll; } }
-
-#descriptionOfProject {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-  text-align: left;
-  align-items: center;
-  margin: 2% 10% 0 10%; }
-  @media (min-width: 616px) {
-    #descriptionOfProject {
-      margin: 5% 20% 0 20%; } }
-
-#bottomBar p {
-  padding-top: 20px; }
+      overflow-y: scroll;
+      width: 45%;
+      height: 85%; } }
 
 .rightIMG {
   float: right;
@@ -74,28 +85,22 @@ a {
   justify-content: space-around;
   align-items: center;
   margin: 5px auto 5px auto;
-  width: 600px;
   min-height: 200px;
   background-position: center;
   /* --------- */
   width: 87%;
   border: .5em solid black;
-  background: white; }
-  @media (min-width: 616px) {
-    .projectLinks {
-      width: 88.5%; } }
+  background: white;
+  /*  @media (min-width: 1200px)  { @content; } */ }
   @media (min-width: 960px) {
     .projectLinks {
-      margin: 10px;
-      /*width: 53%;*/
-      float: right; }
-      .projectLinks h2 {
-        margin-top: 75px; } }
+      width: 87%; } }
 
 #about {
   border: none;
   background-size: cover;
-  background-image: url("./images/testMe.jpg"); }
+  background-image: url("./images/testMe.jpg");
+  /*  @media (min-width: 1200px)  { @content; } */ }
   #about p {
     display: none; }
   @media (min-width: 616px) {
@@ -104,13 +109,9 @@ a {
       background-image: url("./images/smlz.jpg"); } }
   @media (min-width: 960px) {
     #about {
-      margin: 10px;
-      height: 490px;
-      width: 40%;
-      float: left;
-      /*clear: bottom;*/
-      background-position: center;
-      background-image: url("./images/bikenormal.jpg"); } }
+      background-image: url("./images/bikenormal.jpg");
+      height: 85%;
+      width: 95%; } }
 
 #curious {
   background-color: transparent;
@@ -133,10 +134,29 @@ a {
   font-size: 200%;
   font-weight: bold;
   background-color: #837E7C;
-  /*width: 99%;*/
   height: 80px;
   text-align: center;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  /*  @media (min-width: 1200px)  { @content; } */ }
+  @media (min-width: 960px) {
+    #bottomBar {
+      position: fixed;
+      bottom: 0px; } }
+
+#descriptionOfProject {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  height: 78%;
+  text-align: left;
+  align-items: center;
+  margin: 2% 10% 0 10%; }
+  @media (min-width: 616px) {
+    #descriptionOfProject {
+      margin: 5% 20% 0 20%; } }
+
+#bottomBar p {
+  padding-top: 20px; }
 
 /*# sourceMappingURL=resumepage.css.map */
