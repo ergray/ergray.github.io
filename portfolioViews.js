@@ -82,7 +82,7 @@ var BurgerView = Backbone.View.extend({
 						"isn't exactly one of my strong points at the moment, and I imagine myself "+
 						"in a working role of creating logic for a design team."+
 					"<br><p><br>"+
-						"<a href='https://github.com/ergray/BurgerQuest'><img class='centerIMG' src='ergray.github.io/images/burgerCapture.PNG'></a><br><br>"+
+						"<a href='https://github.com/ergray/BurgerQuest'><img class='centerIMG' src='./images/burgerCapture.PNG'></a><br><br>"+
 					"</p><br>"+
 					"<p>"+
 						"This game was a lot of fun to create. I gave myself a minimum viable "+
@@ -106,7 +106,7 @@ var BurgerView = Backbone.View.extend({
 						"are benefits and detriments to how well food is cooked, represented by tips. "+
 						"Currently there is no use for this money, however in future iterations my "+
 						"intent is to add a mechanism for purchasing cooking tools, as well as stealing "+
-						"from the register (which will have its own consequences."+
+						"from the register (which will have its own consequences)."+
 					"</p><br>"+	
 					"<p>"+
 						"You can find a working version of this game here: <a href='http://www.htmlsouls.com/BurgerQuest/game.html'>Burger Quest</a>"+

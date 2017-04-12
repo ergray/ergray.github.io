@@ -148,13 +148,18 @@ a {
   display: flex;
   flex-direction: column;
   height: 200px;
-  height: 78%;
+  height: 70%;
   text-align: left;
   align-items: center;
-  margin: 2% 10% 0 10%; }
+  margin: 2% 10% 2% 10%;
+  /*  @media (min-width: 1200px)  { @content; } */ }
   @media (min-width: 616px) {
     #descriptionOfProject {
-      margin: 5% 20% 0 20%; } }
+      margin: 5% 20% 5% 20%; } }
+  @media (min-width: 960px) {
+    #descriptionOfProject {
+      height: 65%;
+      overflow-y: scroll; } }
 
 #bottomBar p {
   padding-top: 20px; }

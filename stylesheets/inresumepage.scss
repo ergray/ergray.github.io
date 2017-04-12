@@ -213,13 +213,18 @@
 		display: flex;
 		flex-direction: column;
 		height: 200px; 
-		height: 78%;
+		height: 70%;
 		text-align: left;
 		align-items: center;
-		margin: 2% 10% 0 10%;
+		margin: 2% 10% 2% 10%;
 
 		@include breakpoint(sm){
-			margin: 5% 20% 0 20%
+			margin: 5% 20% 5% 20%
+		}
+
+		@include breakpoint(lg){
+			height: 65%;
+			overflow-y: scroll;
 		}
 
 	}
