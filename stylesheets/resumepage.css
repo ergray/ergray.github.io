@@ -35,11 +35,24 @@ a {
   width: 100%;
   height: auto; }
 
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 350px solid transparent;
+  border-right: 350px solid transparent;
+  border-bottom: 350px solid yellow; }
+
+.triangleItem {
+  position: absolute; }
+
+#triangleTop {
+  top: 200px; }
+
 #mainContainer {
   text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
   height: 85%;
   /*  @media (min-width: 1200px)  { @content; } */ }
@@ -65,14 +78,9 @@ a {
 #rightLinks {
   float: right;
   display: flex;
-  flex-direction: column;
-  width: 97%;
-  /*  @media (min-width: 1200px)  { @content; } */ }
-  @media (min-width: 960px) {
-    #rightLinks {
-      overflow-y: scroll;
-      width: 45%;
-      height: 85%; } }
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 97%; }
 
 .rightIMG {
   float: right;
@@ -81,6 +89,9 @@ a {
 .centerIMG {
   display: block;
   margin: auto; }
+
+#intro {
+  margin: 10px 0 0 10px; }
 
 .projectLinks {
   cursor: pointer;
@@ -92,20 +103,22 @@ a {
   min-height: 200px;
   background-position: center;
   /* --------- */
-  width: 87%;
-  border: .5em solid black;
-  background: white;
-  /*  @media (min-width: 1200px)  { @content; } */ }
-  @media (min-width: 960px) {
-    .projectLinks {
-      width: 87%; } }
+  width: 100%;
+  border: none;
+  background: lightpink;
+  border-radius: 10%; }
 
 #imgContainer {
   /*  @media (min-width: 1200px)  { @content; } */ }
-  @media (min-width: 616px) {
+  @media (min-width: 774px) {
     #imgContainer {
       height: 216px;
       width: auto; } }
+  @media (min-width: 774px) {
+    #imgContainer {
+      overflow: hidden;
+      height: 100px;
+      width: 100px; } }
   @media (min-width: 960px) {
     #imgContainer {
       position: relative;
@@ -125,11 +138,17 @@ a {
   height: auto;
   border-radius: 50%;
   /*  @media (min-width: 1200px)  { @content; } */ }
-  @media (min-width: 616px) {
+  @media (min-width: 480px) {
     #myImg {
       width: auto;
       max-height: 100%;
       margin: 0 30px 30px 30px; } }
+  @media (min-width: 774px) {
+    #myImg {
+      margin-top: 200px;
+      max-width: 100%;
+      height: auto;
+      margin: auto; } }
   @media (min-width: 960px) {
     #myImg {
       margin-top: 0;
@@ -142,7 +161,7 @@ a {
   /*  @media (min-width: 1200px)  { @content; } */ }
   #about p {
     display: none; }
-  @media (min-width: 616px) {
+  @media (min-width: 480px) {
     #about {
       background-position: center;
       flex-direction: row; } }
@@ -151,13 +170,31 @@ a {
       flex-direction: column;
       min-height: 400px; } }
 
-#curious {
-  background-color: transparent;
-  background-image: url("./images/curiousLarger.png");
-  background-size: cover;
-  background-position: left top; }
-  #curious p {
-    display: none; }
+.projlink {
+  width: 95%;
+  margin: 0px 15px;
+  text-decoration: none;
+  /*  @media (min-width: 1200px)  { @content; } */ }
+  @media (min-width: 480px) {
+    .projlink {
+      width: 46%;
+      margin: 5px; } }
+  @media (min-width: 774px) {
+    .projlink {
+      width: 46%;
+      margin: 0px 15px; } }
+  @media (min-width: 960px) {
+    .projlink {
+      margin: 0px 15px;
+      width: 30%;
+      height: auto; } }
+
+.projlink H2 {
+  line-height: 40px; }
+
+.frontDesc {
+  width: 50%;
+  height: auto; }
 
 .full-width {
   width: 100vw;
@@ -184,7 +221,7 @@ a {
   text-align: left;
   align-items: center;
   margin: 2% 10% 2% 10%; }
-  @media (min-width: 616px) {
+  @media (min-width: 774px) {
     #descriptionOfProject {
       margin: 5% 20% 5% 20%; } }
 

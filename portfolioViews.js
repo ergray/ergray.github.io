@@ -15,71 +15,60 @@ var FrontPage = Backbone.View.extend({
 	render: function(){
 		console.log(this.events);
 		$("#anchor").append(
-			"<div id='topBar'>"+
-				"<h1>Eric Gray - Full Stack Javascript Developer</h1><br>"+
-				"<div id='linksRow'>"+
-					"<div><a href='https://github.com/ergray'><img height='25px' width='50px' src='./images/GitHub_Logo.png'></img></a></div>"+
-					"<div><a href='somelinkedin'><img height='25px' width='25px' src='./images/linkedin.png'></img></a></div>"+
-					"<div><a href='mailto:ericxgray@gmail.com'><img height='30px' width='50px' src='./images/email.svg'></img></a></div>"+
-				"</div>"+
+			"<div id='intro'>"+
+				"<h1>Eric Gray</h1>"+
+				"<h5><span style='color:green'>Javascript</span> - <span style='color:red'>SQL</span> - <span style='color:orange'>Games</span></h5>"+
 			"</div>"+
+			"<br>"+
 			"<div id='mainContainer'>"+
-				"<div id='leftAbout'>"+
-					"<div class='projectLinks' id='about'>"+
-						"<div id='imgContainer'>"+
-							"<img id='myImg' src='./images/MeFirstCut.jpg'></img>"+
-						"</div>"+
-						"<div id='aboutText'>"+
-							"<span>Hey, thanks for stopping by! I'm Eric and I can help you out"+
-							" with your Javascript, React, Node.JS needs, and more! Click "+
-							"here for more information about me.</span>"+
-						"</div>"+
-					"</div>"+
-				"</div>"+	
+	
 				"<div id='rightLinks'>"+
 					"<br>"+
-					"<h1>My Projects!</h1>"+
 					"<br>"+
-					"<div class='projectLinks' id='cooking'>"+
+					"<a class='projlink' href='#cooking'><div class='projectLinks' id='cooking'>"+
 						"<H2>Cooking Collective</H2>"+
-						"<p>A Javascript web application featuring React, Redux, Node and MySQL</p>"+
-					"</div>"+
-					"<div class='projectLinks' id='burgers'>"+
+						"<div class='frontDesc'><p>A Javascript web application featuring React, Redux, Node and MySQL</p></div>"+
+					"</div></a>"+
+					"<a class='projlink' href='#burgers'><div class='projectLinks' id='burgers'>"+
 						"<H2>BurgerQuest</H2>"+
-						"<p>Written with Javascript, jQuery, Underscore, and HTML Canvas</p>"+
-					"</div>"+
-					"<div class='projectLinks' id='adventure'>"+
+						"<div class='frontDesc'><p>Written with Javascript, jQuery, Underscore, and HTML Canvas</p></div>"+
+					"</div></a>"+
+					"<a class='projlink' href='#adventure'><div class='projectLinks' id='adventure'>"+
 						"<H2>Mundane Hero</H2>"+
-						"<p>A Choose Your Own Adventure Game written with Backbone</p>"+
-					"</div>"+
-					"<div class='projectLinks' id='curious'>"+
-						"<p>Curious Cities</p>"+
-					"</div>"+
-					"<div class='projectLinks' id='employee'>"+
+						"<div class='frontDesc'><p>A Choose Your Own Adventure Game written with Backbone</p></div>"+
+					"</div></a>"+
+					"<a class='projlink' href='#curious'><div class='projectLinks' id='curious'>"+
+						"<H2>Curious Cities</H2>"+
+						"<div class='frontDesc'><p>Javascript web application written in Backbone</p></div>"+
+					"</div></a>"+
+					"<a class='projlink' href='#employee'><div class='projectLinks' id='employee'>"+
 						"<H2>Simple Scheduling App</H2>"+
-						"<p>Written with the Backbone Javascript framework<p>"+
-					"</div>"+
+						"<div class='frontDesc'><p>Written with the Backbone Javascript framework<p></div>"+
+					"</div></a>"+
+					"<a class='projlink' href='#contact'><div class='projectLinks' id='contact'>"+
+						"<H2>Get In Touch</H2>"+
+					"</div></a>"+
 				"</div>"+
 			"</div>"
 			)
 	},
 	
-	selectView: function(e){
-		this.undelegateEvents();
-		console.log(e.target.id)
-		if (e.target.id === ""){
-			var userFocus = ($(e.target).parent()[0].id)
-		} else {
-		 var userFocus = e.target.id
-		};
+	// selectView: function(e){
+	// 	this.undelegateEvents();
+	// 	console.log(e.target.id)
+	// 	if (e.target.id === ""){
+	// 		var userFocus = ($(e.target).parent()[0].id)
+	// 	} else {
+	// 	 var userFocus = e.target.id
+	// 	};
 
-		if (userFocus === "myImg" || userFocus === "aboutText" || userFocus === "imgContainer"){
-			userFocus = "about"
-		}
-		console.log(userFocus);
+	// 	if (userFocus === "myImg" || userFocus === "aboutText" || userFocus === "imgContainer"){
+	// 		userFocus = "about"
+	// 	}
+	// 	console.log(userFocus);
 
-		Backbone.history.navigate(userFocus, {trigger: true});
-	}	
+	// 	Backbone.history.navigate(userFocus, {trigger: true});
+	// }	
 })
 
 var CookingView = Backbone.View.extend({
@@ -117,6 +106,41 @@ var CookingView = Backbone.View.extend({
 					"<H2>Live Project:</H2>"+
 					"<br>"+
 					"<a href='https://cooking-collective.herokuapp.com/'>The Cooking Collective</a>"+
+				"</div>"
+				)
+	},
+
+	homewards: function(){
+		Backbone.history.navigate("");
+		this.undelegateEvents();
+		$("#anchor").children().remove();
+		var frontPage = new FrontPage()
+	}
+})
+
+var ContactView = Backbone.View.extend({
+	el: '#anchor',
+
+	events: {
+		"click #bottomBar" : "homewards"
+	},
+
+	initialize: function(opts){
+		$("#mainContainer").children().remove();
+		this.render()
+	},
+
+	render: function(){
+			$(document).scrollTop(0);
+			$("#mainContainer").append(
+				"<div id='descriptionOfProject'>"+
+					"<br>"+
+					"<ul>"+
+						"<li><a href='https://github.com/ergray'>GitHub</a></li>"+
+						"<li><a href='https://www.linkedin.com/in/ericxgray/'>LinkedIn</a></li>"+
+						"<li><a href='mailto:ericxgray@gmail.com'>Email: ericxgray@gmail.com</a></li>"+
+						"<li>Based out of Oakland, CA</li>"+
+					"</ul>"+
 				"</div>"
 				)
 	},

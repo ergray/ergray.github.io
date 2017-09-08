@@ -1,12 +1,12 @@
 @mixin breakpoint($point) {
     @if $point == sm {
-        @media (min-width:616px) { @content; }
+        // @media (min-width:616px) { @content; }
+        @media (min-width:480px) { @content; }
     }
- /*   @if $point == md {
-        @media (min-width:960px) { @content; }
+    @if $point == md {
+        @media (min-width:774px) { @content; }
     }
-
- */   
+   
     @else if $point == lg {
         @media (min-width: 960px)  { @content; }
       /*  @media (min-width: 1200px)  { @content; } */
@@ -66,13 +66,38 @@
 		height:auto;
 	}
 
+	#triangle {
+		width: 0; 
+		height: 0; 
+		border-left: 350px solid transparent;
+		border-right: 350px solid transparent;		
+		border-bottom: 350px solid yellow;
+	}
+
+	.triangleItem {
+		position: absolute
+	}
+
+	#triangleTop {
+		top: 200px
+	}
+
+	#triangleLeft {
+
+	}
+
+	#triangleRight {
+
+	}
+
 	#mainContainer {
 		text-align: center;
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		flex-direction: row;
+		justify-content: space-around;
 		width: 100%;
 		height: 85%;
+
 
 		@include breakpoint(lg){
 			height: 100%;
@@ -102,15 +127,9 @@
 	#rightLinks {
 		float: right;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 		width: 97%;
-
-
-		@include breakpoint(lg){
-		overflow-y: scroll;
-		width: 45%;
-		height: 85%;		
-		}
 	}
 
 
@@ -123,6 +142,10 @@
 		display: block;
 		margin: auto;
 	}
+
+#intro {
+	margin: 10px 0 0 10px
+}
 
 .projectLinks {
 
@@ -137,30 +160,20 @@
 
 /* --------- */
 
-		width: 87%;
-		border: .5em solid black;
-		background: white;		
+		width: 100%;
+		border: none;
+		background: lightpink;
+		border-radius: 10%;		
 
-		@include breakpoint(md){
-			margin: 10px;
-			float: right;
-			height: 80%;
 
-			h2 {
-				margin-top: 75px
-			}
-		}
-
-		@include breakpoint(lg){
-			width: 87%;
-		}	
 }	
 
 #imgContainer {
 
 
 	// background: yellow;
-	@include breakpoint(sm){
+	// @include breakpoint(sm){
+	@include breakpoint(md){
 		// overflow: hidden;
 		height: 216px;
 		width: auto;
@@ -248,15 +261,46 @@
 	}
 
 	#curious {
-		background-color: transparent;
-		background-image: url("./images/curiousLarger.png");
-		background-size: cover; 
-		background-position: left top;
+		// background-color: transparent;
+		// background-image: url("./images/curiousLarger.png");
+		// background-size: cover; 
+		// background-position: left top;
 
-		p {
-			display: none
-		};
+		// p {
+		// 	display: none
+		// };
 	
+	}
+
+	.projlink {
+		width: 95%;
+		margin: 0px 15px;
+		text-decoration: none;
+
+		@include breakpoint(sm){
+			width: 46%;
+			margin: 5px
+		}
+		// @include breakpoint(sm){
+		@include breakpoint(md){
+			width: 46%;
+			margin: 0px 15px;
+		}
+
+		@include breakpoint(lg){
+			margin: 0px 15px;
+			width: 30%;
+			height: auto;
+		}
+	}
+
+	.projlink H2 {
+		line-height: 40px
+	}
+
+	.frontDesc {
+		width: 50%;
+		height: auto
 	}
 
 	.full-width {
@@ -295,7 +339,8 @@
 		align-items: center;
 		margin: 2% 10% 2% 10%;
 
-		@include breakpoint(sm){
+		// @include breakpoint(sm){
+		@include breakpoint(md){
 			margin: 5% 20% 5% 20%
 		}
 
