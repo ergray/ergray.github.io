@@ -16,15 +16,34 @@ var FrontPage = Backbone.View.extend({
 		console.log(this.events);
 		$("#anchor").append(
 			"<div id='topBar'>"+
-				"<h1>Eric Gray - Full Stack Javascript Developer</h1>"+
+				"<h1>Eric Gray - Full Stack Javascript Developer</h1><br>"+
+				"<div id='linksRow'>"+
+					"<div><a href='https://github.com/ergray'><img height='25px' width='50px' src='./images/GitHub_Logo.png'></img></a></div>"+
+					"<div><a href='somelinkedin'><img height='25px' width='25px' src='./images/linkedin.png'></img></a></div>"+
+					"<div><a href='mailto:ericxgray@gmail.com'><img height='30px' width='50px' src='./images/email.svg'></img></a></div>"+
+				"</div>"+
 			"</div>"+
 			"<div id='mainContainer'>"+
 				"<div id='leftAbout'>"+
 					"<div class='projectLinks' id='about'>"+
-						"<p>About</p>"+
+						"<div id='imgContainer'>"+
+							"<img id='myImg' src='./images/MeFirstCut.jpg'></img>"+
+						"</div>"+
+						"<div id='aboutText'>"+
+							"<span>Hey, thanks for stopping by! I'm Eric and I can help you out"+
+							" with your Javascript, React, Node.JS needs, and more! Click "+
+							"here for more information about me.</span>"+
+						"</div>"+
 					"</div>"+
 				"</div>"+	
 				"<div id='rightLinks'>"+
+					"<br>"+
+					"<h1>My Projects!</h1>"+
+					"<br>"+
+					"<div class='projectLinks' id='cooking'>"+
+						"<H2>Cooking Collective</H2>"+
+						"<p>A Javascript web application featuring React, Redux, Node and MySQL</p>"+
+					"</div>"+
 					"<div class='projectLinks' id='burgers'>"+
 						"<H2>BurgerQuest</H2>"+
 						"<p>Written with Javascript, jQuery, Underscore, and HTML Canvas</p>"+
@@ -47,15 +66,67 @@ var FrontPage = Backbone.View.extend({
 	
 	selectView: function(e){
 		this.undelegateEvents();
+		console.log(e.target.id)
 		if (e.target.id === ""){
 			var userFocus = ($(e.target).parent()[0].id)
 		} else {
 		 var userFocus = e.target.id
 		};
+
+		if (userFocus === "myImg" || userFocus === "aboutText" || userFocus === "imgContainer"){
+			userFocus = "about"
+		}
 		console.log(userFocus);
 
 		Backbone.history.navigate(userFocus, {trigger: true});
 	}	
+})
+
+var CookingView = Backbone.View.extend({
+	el: '#anchor',
+
+	events: {
+		"click #bottomBar" : "homewards"
+	},
+
+	initialize: function(opts){
+		$("#mainContainer").children().remove();
+		this.render()
+	},
+
+	render: function(){
+			$(document).scrollTop(0);
+			$("#mainContainer").append(
+				"<div id='descriptionOfProject'>"+
+					"<br>"+
+					"<h1>The Cooking Collective</h1>"+
+					"<br>"+
+					"<H2>Description:</H2>"+
+					"<br>"+
+						"Coming Soon!"+
+					"<br><p><br>"+
+						"Image coming soon"+
+						"</p><br>"+
+					"<H2>Technologies:</H2>"+
+					"<br>"+
+					"<span>Coming soon!</span>"+
+					"<br>"+
+					"<H2>Soure Code:</H2>"+
+					"<br>"+
+					"<a href='https://github.com/ergray/cooking_collective'>Github Repo</a><br>"+
+					"<H2>Live Project:</H2>"+
+					"<br>"+
+					"<a href='https://cooking-collective.herokuapp.com/'>The Cooking Collective</a>"+
+				"</div>"
+				)
+	},
+
+	homewards: function(){
+		Backbone.history.navigate("");
+		this.undelegateEvents();
+		$("#anchor").children().remove();
+		var frontPage = new FrontPage()
+	}
 })
 
 var BurgerView = Backbone.View.extend({
@@ -114,7 +185,7 @@ var BurgerView = Backbone.View.extend({
 					"<span>"+
 						"You can find the github project here: <a href='https://github.com/ergray/BurgerQuest'>Github Project</a>"+
 					"</span><br><br>"+
-					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+					// "<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
 				"</div>"
 				)
 	},
@@ -185,7 +256,7 @@ var MundaneView = Backbone.View.extend({
 					"<span>"+
 						"A live version of the project is located here: <a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'>Mundane Hero</a>"+
 					"</span><br>"+
-					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+					// "<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
 				"</div>"
 			)		
 	},
@@ -250,7 +321,7 @@ var AboutView = Backbone.View.extend({
 						"My github profile can be found at: <a href='https://github.com/ergray'>https://github.com/ergray</a> "+
 						"and I can be reached at <a href='mailto:ericxgray@gmail.com'>ericxgray@gmail.com</a>."+
 					"</span><br>"+	
-					"<div id='bottomBar' class='full-width'><p>Back</p></div>"+
+					// "<div id='bottomBar' class='full-width'><p>Back</p></div>"+
 				"</div>"
 			)	
 	},
@@ -315,7 +386,7 @@ var CuriousView = Backbone.View.extend({
 					"<span>"+
 						"A live version of the project is located here: <a href='http://curious-cities.herokuapp.com/'>Curious Cities</a>"+
 					"</span><br>"+
-					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+					// "<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
 				"</div>"
 			)	
 	},
@@ -370,10 +441,7 @@ var EmployeeView = Backbone.View.extend({
 					"<span><br>"+
 						"You can find the github project here: <a href='https://github.com/ergray/fivepoints'>Github Project</a>"+
 					"</span><br><br>"+
-					"<span>"+
-						"A live version of the project is located here: <a href='http://ergray.github.io/scheduler/fivepoints.html'>Employee Schedule</a>"+
-					"</span><br>"+
-					"<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
+					// "<div id='bottomBar' class='full-width'><div><p>Back</p></div></div>"+
 				"</div>"
 			)		
 	},

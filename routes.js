@@ -9,7 +9,8 @@ var Router = Backbone.Router.extend ({
 		"adventure": "mundaneBuild",
 		"about": "aboutBuild",
 		"employee": "schedulerBuild",
-		"curious": "citiesBuild"
+		"curious": "citiesBuild",
+		"cooking": "cookingBuild"
 	},
 
 	render: function(){
@@ -18,6 +19,11 @@ var Router = Backbone.Router.extend ({
 	};
 		$("#anchor").children().remove();
 		this.index = new FrontPage({router: this});	
+	},
+
+	cookingBuild: function(){
+		this.addMainContainer();
+		var cooking = new CookingView()
 	},
 
 	burgerBuild: function(){
