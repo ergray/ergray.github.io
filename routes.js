@@ -10,7 +10,8 @@ var Router = Backbone.Router.extend ({
 		"about": "aboutBuild",
 		"employee": "schedulerBuild",
 		"curious": "citiesBuild",
-		"cooking": "cookingBuild"
+		"cooking": "cookingBuild",
+		"contact": "contactBuild"
 	},
 
 	render: function(){
@@ -19,6 +20,11 @@ var Router = Backbone.Router.extend ({
 	};
 		$("#anchor").children().remove();
 		this.index = new FrontPage({router: this});	
+	},
+
+	contactBuild: function(){
+		this.addMainContainer();
+		var cooking = new ContactView()
 	},
 
 	cookingBuild: function(){
@@ -55,9 +61,11 @@ var Router = Backbone.Router.extend ({
 		if($('#anchor').children().length === 0){
 			return (
 				$("#anchor").append(
-					"<div id='topBar'>"+
-						"<h1>Eric Gray - Full Stack Javascript Developer</h1>"+
+					"<div id='intro'>"+
+						"<h1>Eric Gray</h1>"+
+						"<h5><span style='color:green'>Javascript</span> - <span style='color:red'>SQL</span> - <span style='color:orange'>Games</span></h5>"+
 					"</div>"+
+					"<br>"+
 					"<div id='mainContainer'>"+
 					"</div>"
 				)
