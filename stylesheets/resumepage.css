@@ -172,8 +172,9 @@ a {
 
 .projlink {
   width: 95%;
-  margin: 0px 15px;
+  margin: 10px 15px;
   text-decoration: none;
+  height: 200px;
   /*  @media (min-width: 1200px)  { @content; } */ }
   @media (min-width: 480px) {
     .projlink {
@@ -182,12 +183,11 @@ a {
   @media (min-width: 774px) {
     .projlink {
       width: 46%;
-      margin: 0px 15px; } }
+      margin: 15px; } }
   @media (min-width: 960px) {
     .projlink {
-      margin: 0px 15px;
-      width: 30%;
-      height: auto; } }
+      margin: 15px;
+      width: 30%; } }
 
 .projlink H2 {
   line-height: 40px; }

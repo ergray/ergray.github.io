@@ -274,8 +274,9 @@
 
 	.projlink {
 		width: 95%;
-		margin: 0px 15px;
+		margin: 10px 15px;
 		text-decoration: none;
+		height: 200px;
 
 		@include breakpoint(sm){
 			width: 46%;
@@ -284,13 +285,13 @@
 		// @include breakpoint(sm){
 		@include breakpoint(md){
 			width: 46%;
-			margin: 0px 15px;
+			margin: 15px;
 		}
 
 		@include breakpoint(lg){
-			margin: 0px 15px;
+			margin: 15px;
 			width: 30%;
-			height: auto;
+			// height: auto;
 		}
 	}
 
