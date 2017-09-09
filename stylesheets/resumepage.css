@@ -35,31 +35,13 @@ a {
   width: 100%;
   height: auto; }
 
-#triangle {
-  width: 0;
-  height: 0;
-  border-left: 350px solid transparent;
-  border-right: 350px solid transparent;
-  border-bottom: 350px solid yellow; }
-
-.triangleItem {
-  position: absolute; }
-
-#triangleTop {
-  top: 200px; }
-
 #mainContainer {
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  height: 85%;
-  /*  @media (min-width: 1200px)  { @content; } */ }
-  @media (min-width: 960px) {
-    #mainContainer {
-      height: 100%;
-      flex-direction: row; } }
+  height: 85%; }
 
 #leftAbout {
   width: 97%;
@@ -91,7 +73,21 @@ a {
   margin: auto; }
 
 #intro {
-  margin: 10px 0 0 10px; }
+  padding: 30px; }
+
+#projects {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  /*  @media (min-width: 1200px)  { @content; } */ }
+  @media (min-width: 480px) {
+    #projects {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  @media (min-width: 960px) {
+    #projects {
+      justify-content: space-evenly; } }
 
 .projectLinks {
   cursor: pointer;
@@ -107,68 +103,6 @@ a {
   border: none;
   background: lightpink;
   border-radius: 10%; }
-
-#imgContainer {
-  /*  @media (min-width: 1200px)  { @content; } */ }
-  @media (min-width: 774px) {
-    #imgContainer {
-      height: 216px;
-      width: auto; } }
-  @media (min-width: 774px) {
-    #imgContainer {
-      overflow: hidden;
-      height: 100px;
-      width: 100px; } }
-  @media (min-width: 960px) {
-    #imgContainer {
-      position: relative;
-      width: 100%;
-      height: 300px; } }
-
-#aboutText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-  justify-content: space-around;
-  margin: auto; }
-
-#myImg {
-  width: 60%;
-  height: auto;
-  border-radius: 50%;
-  /*  @media (min-width: 1200px)  { @content; } */ }
-  @media (min-width: 480px) {
-    #myImg {
-      width: auto;
-      max-height: 100%;
-      margin: 0 30px 30px 30px; } }
-  @media (min-width: 774px) {
-    #myImg {
-      margin-top: 200px;
-      max-width: 100%;
-      height: auto;
-      margin: auto; } }
-  @media (min-width: 960px) {
-    #myImg {
-      margin-top: 0;
-      height: 100%;
-      width: 70%; } }
-
-#about {
-  align-items: flex-start;
-  border: none;
-  /*  @media (min-width: 1200px)  { @content; } */ }
-  #about p {
-    display: none; }
-  @media (min-width: 480px) {
-    #about {
-      background-position: center;
-      flex-direction: row; } }
-  @media (min-width: 960px) {
-    #about {
-      flex-direction: column;
-      min-height: 400px; } }
 
 .projlink {
   width: 95%;
@@ -225,7 +159,16 @@ a {
     #descriptionOfProject {
       margin: 5% 20% 5% 20%; } }
 
-#bottomBar p {
-  padding-top: 20px; }
+#bottomBar {
+  padding-top: 50px;
+  background-color: #c1c1c1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+#meBlurb {
+  width: 300px;
+  text-align: left;
+  padding-left: 30px; }
 
 /*# sourceMappingURL=resumepage.css.map */

@@ -16,15 +16,18 @@ var FrontPage = Backbone.View.extend({
 		console.log(this.events);
 		$("#anchor").append(
 			"<div id='intro'>"+
-				"<h1>Eric Gray</h1>"+
+				"<h1>Eric Gray</h1><br>"+
 				"<h5><span style='color:green'>Javascript</span> - <span style='color:red'>SQL</span> - <span style='color:orange'>Games</span></h5>"+
 			"</div>"+
 			"<br>"+
+					
 			"<div id='mainContainer'>"+
-	
-				"<div id='rightLinks'>"+
-					"<br>"+
-					"<br>"+
+				"<div id='meBlurb'>"+
+					"<p>I've worked at famous bookstores and shipped dangerous goods but I don't think "+
+					"I've enjoyed any of it as much as I enjoy coding. If you're interested in discussing "+
+					"a project, I'd love to talk to you about it!</p><br>"+
+				"</div>"+
+				"<div id='projects'>"+
 					"<a class='projlink' href='#cooking'><div class='projectLinks' id='cooking'>"+
 						"<H2>Cooking Collective</H2>"+
 						"<div class='frontDesc'><p>A Javascript web application featuring React, Redux, Node and MySQL</p></div>"+
