@@ -76,7 +76,7 @@ var CookingView = Backbone.View.extend({
 					"<div class='projSubheader'>"+
 						"<H3>Description:</H3>"+
 						"<br>"+
-						"<p>Cooking Collective is a web application meant to help users determine"+
+						"<p id='projectP'>Cooking Collective is a web application meant to help users determine"+
 						"what recipes they can make based on what foodstuffs they have at any given"+
 						"moment. Users add inventory from a list of known ingredients and can create"+
 						"recipes that are shared with other users."+
@@ -155,7 +155,7 @@ var BurgerView = Backbone.View.extend({
 					"<div class='projSubheader'>"+
 						"<H3>Description:</H3>"+
 						"<br>"+
-						"<p>BurgerQuest is a game inspired by the role playing games I used to"+
+						"<p id='projectP'>BurgerQuest is a game inspired by the role playing games I used to"+
 						"play as a kid. This is the first visual game with moving parts that I"+
 						"have made, and it was a fun process to learn about object collision."+
 						"I plan to continue updating this further in between other projects."+
@@ -206,7 +206,7 @@ var MundaneView = Backbone.View.extend({
 					"<div class='projSubheader'>"+
 						"<H3>Description:</H3>"+
 						"<br>"+
-						"<p>Mundane Hero is a choose your own adventure game from the"+
+						"<p id='projectP'>Mundane Hero is a choose your own adventure game from the"+
 						"perspective of a powerless individual in a world full of"+
 						"super heroes and villains. Besides being a choose your own"+
 						"adventure, it also includes a character creation process. This "+
@@ -261,7 +261,7 @@ var CuriousView = Backbone.View.extend({
 					"<div class='projSubheader'>"+
 						"<H3>Description:</H3>"+
 						"<br>"+
-						"<p>Curious Cities was a final project for Portland Code School. This "+
+						"<p id='projectP'>Curious Cities was a final project for Portland Code School. This "+
 						"was a group project done with two others. The purpose of the application "+
 						"was to provide users with a map of their local city (in this early iteration "+
 						"Portland, OR specifically, and give them the ability to drop permanent markers "+
@@ -312,7 +312,7 @@ var EmployeeView = Backbone.View.extend({
 					"<div class='projSubheader'>"+
 						"<H3>Description:</H3>"+
 						"<br>"+
-						"<p>This was one of the first applications I built from scratch. An owner of "+
+						"<p id='projectP'>This was one of the first applications I built from scratch. An owner of "+
 						"a cafe nearby wanted something to keep basic track of which days and shifts "+
 						"his employees were working. I came up with a simple NoSQL solution that allowed "+
 						"him to add and delete employees, and adjust their workings days and hours."+

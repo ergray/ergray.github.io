@@ -113,7 +113,7 @@ a {
   color: black; }
 
 .projlink {
-  width: 95%;
+  width: auto;
   margin: 10px 15px;
   text-decoration: none;
   height: 200px;
@@ -152,11 +152,14 @@ a {
   height: 100%;
   text-align: left;
   align-items: left;
-  margin: 2% 10% 0 10%;
+  margin: 0 10% 0 10%;
   justify-content: space-between; }
   @media (min-width: 774px) {
     #descriptionOfProject {
-      margin: 5% 20% 0 20%; } }
+      margin: 0 20% 0 20%; } }
+
+#projectP {
+  max-width: 600px; }
 
 .projSubheader {
   padding: 10px 0; }
@@ -173,7 +176,7 @@ a {
   padding: 0 20px; }
 
 #meBlurb {
-  width: 300px;
+  max-width: 300px;
   text-align: left;
   padding-left: 30px; }
 
