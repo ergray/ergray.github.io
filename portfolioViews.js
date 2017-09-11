@@ -233,7 +233,7 @@ var MundaneView = Backbone.View.extend({
 					"<br>"+
 					"<div class='projSubheader'>"+
 						"<h3>Live Project:</h3>"+
-						"<a href='http://www.htmlsouls.com/SuperheroCYOA/superhero.html'>Mundane Hero</a>"+
+						"<a href='https://ergray.github.io/mundanehero'>Mundane Hero</a>"+
 					"</div>"+
 				"</div>"
 			)		
