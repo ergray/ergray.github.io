@@ -77,7 +77,7 @@ a {
 
 #projects {
   display: flex;
-  width: 100%;
+  width: 95%;
   height: auto;
   flex-direction: column;
   /*  @media (min-width: 1200px)  { @content; } */ }
@@ -87,7 +87,7 @@ a {
       flex-wrap: wrap; } }
   @media (min-width: 960px) {
     #projects {
-      justify-content: space-evenly; } }
+      justify-content: flex-start; } }
 
 .projectLinks {
   cursor: pointer;
@@ -95,14 +95,13 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 5px auto 5px auto;
   min-height: 200px;
   background-position: center;
   /* --------- */
-  width: 100%;
+  width: 95%;
   border: none;
   background: lightpink;
-  border-radius: 10%; }
+  border-radius: 70px; }
 
 .odds {
   background-color: #990dbc;
@@ -112,23 +111,24 @@ a {
   background-color: #a772b5;
   color: black; }
 
+.projName {
+  width: 60%; }
+
 .projlink {
+  padding-left: 30px;
+  margin: 5px 0;
   width: auto;
-  margin: 10px 15px;
   text-decoration: none;
   height: 200px;
   /*  @media (min-width: 1200px)  { @content; } */ }
   @media (min-width: 480px) {
     .projlink {
-      width: 46%;
-      margin: 5px; } }
-  @media (min-width: 774px) {
+      width: 100%; } }
+  @media (min-width: 700px) {
     .projlink {
-      width: 46%;
-      margin: 15px; } }
+      width: 46%; } }
   @media (min-width: 960px) {
     .projlink {
-      margin: 15px;
       width: 30%; } }
 
 .projlink H2 {
@@ -154,7 +154,7 @@ a {
   align-items: left;
   margin: 0 10% 0 10%;
   justify-content: space-between; }
-  @media (min-width: 774px) {
+  @media (min-width: 700px) {
     #descriptionOfProject {
       margin: 0 20% 0 20%; } }
 

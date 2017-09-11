@@ -29,23 +29,23 @@ var FrontPage = Backbone.View.extend({
 				"</div>"+
 				"<div id='projects'>"+
 					"<a class='projlink' href='#cooking'><div class='projectLinks odds' id='cooking'>"+
-						"<H2>Cooking Collective</H2>"+
+						"<H2 class='projName'>Cooking Collective</H2>"+
 						"<div class='frontDesc'><p>A Javascript web application featuring React, Redux, Node and MySQL</p></div>"+
 					"</div></a>"+
 					"<a class='projlink' href='#burgers'><div class='projectLinks evens' id='burgers'>"+
-						"<H2>BurgerQuest</H2>"+
+						"<H2 class='projName'>BurgerQuest</H2>"+
 						"<div class='frontDesc'><p>Written with Javascript, jQuery, Underscore, and HTML5 Canvas</p></div>"+
 					"</div></a>"+
 					"<a class='projlink' href='#adventure'><div class='projectLinks odds' id='adventure'>"+
-						"<H2>Mundane Hero</H2>"+
+						"<H2 class='projName'>Mundane Hero</H2>"+
 						"<div class='frontDesc'><p>A Choose Your Own Adventure Game written with Backbone</p></div>"+
 					"</div></a>"+
 					"<a class='projlink' href='#curious'><div class='projectLinks evens' id='curious'>"+
-						"<H2>Curious Cities</H2>"+
+						"<H2 class='projName'>Curious Cities</H2>"+
 						"<div class='frontDesc'><p>Javascript web application written in Backbone</p></div>"+
 					"</div></a>"+
 					"<a class='projlink' href='#employee'><div class='projectLinks odds' id='employee'>"+
-						"<H2>Scheduling Application</H2>"+
+						"<H2 class='projName'>Scheduling Application</H2>"+
 						"<div class='frontDesc'><p>Written with the Backbone Javascript framework<p></div>"+
 					"</div></a>"+
 					"<a class='projlink' href='#contact'><div class='projectLinks evens' id='contact'>"+
