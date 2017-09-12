@@ -179,7 +179,7 @@ var BurgerView = Backbone.View.extend({
 					"<br>"+
 					"<div class='projSubheader'>"+
 						"<h3>Live Project:</h3>"+
-						"<a href='http://www.htmlsouls.com/BurgerQuest/game.html'>BurgerQuest</a>"+
+						"<a href='https://ergray.github.io/BurgerQuest/'>BurgerQuest</a>"+
 					"</div>"+
 				"</div>"
 				)
